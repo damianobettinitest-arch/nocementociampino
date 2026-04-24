@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="it">
 <head>
     <meta charset="UTF-8">
@@ -569,7 +569,7 @@
     <section class="hero">
         <div class="container hero-content reveal">
             <span class="tag tag-green" style="background: rgba(255,255,255,0.25); color: white; backdrop-filter: blur(5px);">Ciampino Folgarella e Viale Kennedy </span>
-            <h1>Fermiamo la colata.<br>Salviamo il nostro <span class="highlight" style="color: var(--primary-light); background: none; -webkit-text-fill-color: initial; font-style: italic;">Futuro.</span></h1>
+            <h1>Fermiamo la colata.<br>Salviamo il nostro <span style="color: var(--accent-light); font-style: italic; text-shadow: 0 4px 12px rgba(0,0,0,0.3);">Futuro.</span></h1>
             <div class="hero-buttons-container">
                 <button id="btn-open-milestone" class="btn btn-primary pulse-green-animation hero-btn">
                     <i class="fa-solid fa-trophy" style="font-size: 1.5rem; color: #fbbf24;"></i>
@@ -578,13 +578,6 @@
                         <span class="event-title">Traguardo 7.000€ per il TAR</span>
                     </div>
                 </button>
-                <a href="ricorso.html" class="btn btn-accent hero-btn">
-                    <i class="fa-solid fa-scale-balanced" style="font-size: 1.5rem;"></i>
-                    <div class="btn-text-col">
-                        <span class="event-date" style="color: rgba(255,255,255,0.9);">Ricorso TAR</span>
-                        <span class="event-title">La Raccolta Continua</span>
-                    </div>
-                </a>
                 <a href="#soluzioni" class="btn btn-primary hero-btn" style="background: white; color: var(--primary-deep);">Scopri la proposta</a>
                 <a href="#progetto" class="btn btn-outline hero-btn">Leggi i Dati</a>
             </div>
@@ -1218,7 +1211,7 @@
         });
 
         btnCopyImg.addEventListener('click', () => {
-            const imgUrl = window.location.origin + '/nocemento-ciampino_06.jpg';
+            const imgUrl = window.location.origin + '/nocemento-ciampino_06.jpeg';
             navigator.clipboard.writeText(imgUrl).then(() => {
                 const originalHTML = btnCopyImg.innerHTML;
                 btnCopyImg.innerHTML = '<i class="fa-solid fa-check"></i> Copiato!';
