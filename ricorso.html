@@ -169,17 +169,20 @@
         .testo-ricorso ul { margin-bottom: 2rem; padding-left: 1.5rem; color: var(--gray); font-size: 1.125rem; line-height: 1.6; }
         .testo-ricorso li { margin-bottom: 0.8rem; }
 
-        .status-box { 
+        .donation-box { 
             background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px);
             border-radius: 32px; padding: 3rem 2.5rem; box-shadow: var(--shadow-lg); 
             border: 1px solid rgba(255,255,255,0.5); position: sticky; top: 120px;
-            text-align: center; overflow: hidden;
+            overflow: hidden;
         }
-        .status-box::before {
+        .donation-box::before {
             content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 6px;
-            background: var(--grad-primary);
+            background: var(--grad-accent);
         }
-        .status-box .fa-circle-check { font-size: 3rem; color: var(--primary); margin-bottom: 1rem; }
+        .donation-item { margin-bottom: 1.5rem; border-bottom: 1px solid rgba(0,0,0,0.05); padding-bottom: 1.5rem; }
+        .donation-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+        .donation-label { display: block; font-size: 0.85rem; color: var(--gray); text-transform: uppercase; font-weight: 700; letter-spacing: 0.05em; margin-bottom: 0.5rem; }
+        .donation-value { display: block; font-size: 1.25rem; font-weight: 800; color: var(--dark); word-break: break-all; }
         
         .info-card { background: white; border-radius: 24px; padding: 2.5rem; margin-top: 3rem; border-left: 6px solid var(--primary); box-shadow: var(--shadow-sm); }
 
@@ -276,24 +279,41 @@
                     
                     <p>Ma la <strong>delibera n. 2/2026 della Giunta Colella</strong> vuole seppellirla sotto 24.000 mq di cemento commerciale. Usano un <em>Permesso di Costruire Convenzionato</em> al posto del Piano Urbanistico Attuativo previsto dal PRG. Non è urbanistica: è un aggiramento.</p>
                     
-                    <p>Noi abbiamo detto no. Per questo motivo, <strong>abbiamo presentato formale Ricorso al TAR Lazio</strong> per fermare questo progetto ed esigere il rispetto delle normative ambientali e di pianificazione.</p>
+                    <p>Noi diciamo no. <strong>Stiamo portando il ricorso al TAR Lazio per fermarli.</strong> È una battaglia legale che richiede risorse — avvocati, atti, perizie. Il tuo sostegno economico può ribaltare la partita.</p>
+
+                    <h3 style="margin-top: 3rem; color: var(--primary-deep); font-size: 1.8rem;">La Petizione Popolare</h3>
+                    <p>La petizione popolare (ai sensi dell’art. 2 del Regolamento sulla partecipazione del Comune di Ciampino) chiede al Comune di fermare temporaneamente il permesso di costruire già deliberato per un grande intervento commerciale/residenziale nell’area G4 – quartiere Folgarè/Folgarella e di rivalutare completamente la pianificazione di tutta quell’area con una variante generale al PRG (o strumento equivalente).</p>
+
+                    <p style="margin-bottom: 0.5rem; color: var(--dark); font-weight: 700;">I motivi principali:</p>
+                    <ul>
+                        <li>Troppo cemento in un territorio già saturo (41-42% di impermeabilizzazione).</li>
+                        <li>Riduzione drastica del verde pubblico.</li>
+                        <li>Mancanza di VAS (valutazione ambientale strategica).</li>
+                        <li>Necessità di più verde fruibile, permeabilità del suolo, mitigazione clima, parchi, aree giochi, orti urbani, interventi idraulici naturali.</li>
+                    </ul>
+
+                    <p style="margin-bottom: 0.5rem; color: var(--dark); font-weight: 700;">Cosa chiediamo concretamente:</p>
+                    <ul>
+                        <li>Sospendere la delibera di Giunta n. 2/2026 e non firmare/rilasciare il permesso di costruire convenzionato.</li>
+                        <li>Valutare una variante generale al PRG per pianificare in modo unitario l’area G4 con: più verde pubblico, attenzione a bambini e anziani, edifici ecosostenibili e soluzioni per l’acqua piovana.</li>
+                        <li>Aprire un tavolo pubblico di confronto con cittadini e associazioni.</li>
+                    </ul>
+
+                    <p style="margin-bottom: 0.5rem; color: var(--dark); font-weight: 700;">Cosa serve per partecipare?</p>
+                    <p>La petizione è valida se presentata da cittadini residenti a Ciampino. Basta compilare una riga per persona sul modulo (cartaceo o digitale) con: Nome e Cognome, Luogo e data di nascita, Residenza, Recapito (email o telefono) e Firma autografa.</p>
+
+                    <p style="font-weight: 800; color: var(--primary-dark); font-style: italic; margin-bottom: 2.5rem; font-size: 1.1rem;">
+                        In breve: se abiti a Ciampino e non vuoi l’ennesimo grande centro commerciale con pochissimo verde in quell’area, firma e fai firmare!
+                    </p>
 
                     <div class="info-card">
-                        <h3 style="margin-bottom: 1.5rem; color: var(--primary-deep); font-size: 1.6rem;">Le Ragioni dell'Opposizione</h3>
-                        <p style="margin-bottom: 1rem; color: var(--dark); font-weight: 600;">L'azione legale e l'appello popolare si fondano su alcune criticità inequivocabili:</p>
+                        <h3 style="margin-bottom: 1rem; color: var(--primary-deep); font-size: 1.4rem;">Vieni a incontrarci e a firmare</h3>
+                        <p style="margin-bottom: 0.5rem; color: var(--dark);"><strong>Domenica 15 marzo ore 10:30</strong><br>Parco Piazza Kennedy. Firma la petizione, dona di persona, unisciti a noi.</p>
                         
-                        <ul>
-                            <li><strong>Consumo di suolo estremo:</strong> Troppo nuovo cemento in un territorio comunale già fortemente saturo (oltre il 41-42% di impermeabilizzazione).</li>
-                            <li><strong>Carenza di servizi primari:</strong> Riduzione drastica del vero verde pubblico a vantaggio di strutture ludico-sportive prevalentemente private a pagamento.</li>
-                            <li><strong>Carenze procedurali:</strong> Mancanza di VAS (Valutazione Ambientale Strategica) necessaria per interventi di questo calibro e in questa classificazione d'area.</li>
-                            <li><strong>Emergenza Climatica ignorata:</strong> Necessità urgente di più verde fruibile, permeabilità del suolo per scongiurare allagamenti, mitigazione del clima, parchi, aree giochi, orti urbani e interventi idraulici naturali basati sulla natura (NBS).</li>
-                        </ul>
-
-                        <p style="margin-bottom: 1rem; margin-top: 2rem; color: var(--dark); font-weight: 600;">Cosa chiediamo alle Istituzioni:</p>
-                        <ul>
-                            <li>L'annullamento degli atti impugnati e la sospensione del permesso di costruire convenzionato.</li>
-                            <li>Di rivalutare la situazione attraverso una variante generale al PRG per pianificare in modo unitario, coerente e sostenibile l’intera area G4.</li>
-                            <li>L'apertura di un vero tavolo pubblico di confronto con i cittadini e le associazioni locali.</li>
+                        <p style="margin-top: 1.5rem; margin-bottom: 0.5rem; color: var(--dark); font-weight: 600;">Puoi firmare la petizione anche presso:</p>
+                        <ul style="list-style-type: disc; padding-left: 1.5rem; color: var(--gray);">
+                            <li><strong>Fisioterapia Ciampino</strong> – via Pirzio Biroli 117/D</li>
+                            <li><strong>Pizzeria Il Boccale</strong> – viale Kennedy 109</li>
                         </ul>
                     </div>
 
@@ -302,17 +322,24 @@
                     </p>
                 </div>
 
-                <div class="status-box">
-                    <i class="fa-solid fa-circle-check"></i>
-                    <h3 class="highlight" style="font-size: 2rem; margin-bottom: 1rem;">Obiettivo Raggiunto!</h3>
+                <div class="donation-box">
+                    <h3 class="highlight" style="background: var(--grad-accent); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 1.5rem; font-size: 2rem;">Dona per il Verde</h3>
+                    <p style="font-size: 1.05rem; margin-bottom: 2.5rem; color: var(--gray);">Un contributo piccolo o grande: ogni euro conta per tenere viva questa terra e il futuro del quartiere.</p>
                     
-                    <p style="font-size: 1.05rem; margin-bottom: 1.5rem; color: var(--dark);">La raccolta firme e la campagna di finanziamento per sostenere le spese legali del Ricorso al TAR sono attualmente <strong>concluse</strong>.</p>
+                    <div class="donation-item">
+                        <span class="donation-label">Intestatario</span>
+                        <span class="donation-value">Officine Civiche APS</span>
+                    </div>
                     
-                    <span class="tag tag-green" style="font-size: 1.1rem; padding: 0.6rem 1.5rem; display: inline-block; margin-bottom: 1.5rem;">
-                        <i class="fa-solid fa-trophy" style="color: var(--accent-light); margin-right: 5px;"></i> 7.000€ Raccolti
-                    </span>
-
-                    <p style="font-size: 0.95rem; color: var(--gray); margin-bottom: 0;">Grazie alla straordinaria partecipazione e solidarietà della cittadinanza, abbiamo i mezzi per portare avanti questa fondamentale battaglia per il nostro territorio. Continua a seguirci per tutti i futuri aggiornamenti.</p>
+                    <div class="donation-item">
+                        <span class="donation-label">IBAN</span>
+                        <span class="donation-value" style="font-family: monospace; letter-spacing: 1px; color: var(--primary-deep);">IT56I0103039100000000375662</span>
+                    </div>
+                    
+                    <div class="donation-item">
+                        <span class="donation-label">Causale obbligatoria</span>
+                        <span class="donation-value">Ricorso Folgarella</span>
+                    </div>
                 </div>
 
             </div>
