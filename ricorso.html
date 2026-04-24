@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ricorso TAR - Raccolta fondi per salvare la Folgarella | No Cemento Ciampino</title>
+    <meta name="description" content="Sostieni il Ricorso al TAR per fermare la cementificazione della Vigna della Folgarella a Ciampino. Dona ora e firma la petizione.">
+    
+    <meta property="og:site_name" content="No Cemento Ciampino">
+    <meta property="og:url" content="https://nocementociampino.it/ricorso.html"> 
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Ricorso TAR - Raccolta fondi per salvare la Folgarella">
+    <meta property="og:description" content="Sostieni la battaglia legale per fermare il progetto commerciale di 24.000mq. Ogni contributo conta.">
+    <meta property="og:image" content="https://nocementociampino.it/nocemento-ciampino-logo.jpg">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="it_IT">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Ricorso TAR - Raccolta fondi per la Folgarella">
+    <meta name="twitter:description" content="Aiutaci a fermare il cemento con un Ricorso al TAR. Dona ora.">
+    <meta name="twitter:image" content="https://nocementociampino.it/nocemento-ciampino-logo.jpg">
+
+    <link rel="icon" type="image/jpeg" href="https://nocementociampino.it/nocemento-ciampino-logo.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;900&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">    
+    
+    <style>
+        /* === VARIABILI & CONFIGURAZIONE === */
+        :root {
+            --primary: #10b981;
+            --primary-dark: #047857;
+            --accent: #f59e0b;
+            --danger: #ef4444;
+            --dark: #111827;
+            --gray: #6b7280;
+            --light: #f3f4f6;
+            --white: #ffffff;
+            --font-main: 'Outfit', sans-serif;
+            --font-serif: 'Playfair Display', serif;
+            --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        /* === RESET & BASE === */
+        * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+        body { font-family: var(--font-main); color: var(--dark); background: var(--light); line-height: 1.6; overflow-x: hidden; }
+        h1, h2, h3, h4 { line-height: 1.1; margin-bottom: 1rem; }
+        h1 { font-family: var(--font-serif); font-size: clamp(2.5rem, 6vw, 4.5rem); font-weight: 700; }
+        h2 { font-size: clamp(2rem, 4vw, 3rem); font-weight: 800; }
+        p { margin-bottom: 1.5rem; font-size: 1.125rem; color: var(--gray); }
+        .highlight { color: var(--primary); }
+        .highlight-danger { color: var(--danger); }
+        .text-center { text-align: center; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+
+        /* === COMPONENTI === */
+        .btn { display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; padding: 1rem 2rem; border-radius: 50px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); text-decoration: none; border: none; cursor: pointer; }
+        .btn-primary { background: var(--primary); color: white; box-shadow: 0 10px 20px rgba(16, 185, 129, 0.3); }
+        .btn-primary:hover { background: var(--primary-dark); transform: translateY(-3px); box-shadow: 0 15px 30px rgba(16, 185, 129, 0.4); }
+
+        /* === HEADER === */
+        header { position: fixed; top: 0; width: 100%; z-index: 1000; padding: 1rem 0; transition: 0.4s; }
+        header.scrolled { background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); padding: 0.6rem 0; box-shadow: var(--shadow-sm); }
+        header.scrolled .nav-link { color: var(--dark); }
+        nav { display: flex; justify-content: space-between; align-items: center; }
+        .logo { display: flex; align-items: center; gap: 0.8rem; text-decoration: none; font-weight: 800; font-size: 1.2rem; color: white; }
+        .logo img { height: 50px; width: auto; border-radius: 50%; border: 2px solid white; }
+        header.scrolled .logo { color: var(--dark); }
+        header.scrolled .logo img { border-color: var(--primary); }
+        .nav-links { display: none; gap: 2rem; align-items: center; }
+        .nav-link { color: white; text-decoration: none; font-weight: 500; transition: 0.3s; }
+        .nav-link:hover { color: var(--primary); }
+        .nav-link.active-nav { color: var(--primary); font-weight: 700; }
+        header.scrolled .nav-link.active-nav { color: var(--primary); }
+
+        /* === HERO PER RICORSO === */
+        .hero-ricorso { position: relative; padding: 180px 0 6rem; background: var(--dark); color: white; text-align: center; }
+        .hero-ricorso .tag { background: rgba(245, 158, 11, 0.2); color: var(--accent); display: inline-block; padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.85rem; font-weight: 700; text-transform: uppercase; margin-bottom: 1rem; }
+
+        /* === LAYOUT RICORSO === */
+        .ricorso-section { padding: 4rem 0; }
+        .ricorso-grid { display: grid; grid-template-columns: 1.5fr 1fr; gap: 4rem; align-items: start; }
+        .donation-box { background: white; border-radius: 20px; padding: 3rem; box-shadow: var(--shadow-lg); border-top: 6px solid var(--accent); position: sticky; top: 100px; }
+        .donation-item { margin-bottom: 1.5rem; border-bottom: 1px solid #e5e7eb; padding-bottom: 1rem; }
+        .donation-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+        .donation-label { display: block; font-size: 0.85rem; color: var(--gray); text-transform: uppercase; font-weight: 700; }
+        .donation-value { display: block; font-size: 1.25rem; font-weight: 800; color: var(--dark); word-break: break-all; }
+        .info-card { background: #f8fafc; border-radius: 15px; padding: 2rem; margin-top: 2rem; border-left: 4px solid var(--primary); }
+
+        /* === CTA SECTION === */
+        .cta-section { background: var(--dark); color: white; padding: 6rem 0; text-align: center; position: relative; overflow: hidden; }
+        .cta-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0.1; background: url('https://www.transparenttextures.com/patterns/cubes.png'); }
+
+        /* === FOOTER === */
+        footer { background: #0f172a; color: #94a3b8; padding: 4rem 0 2rem; font-size: 0.9rem; }
+        footer a { color: white; text-decoration: none; transition: 0.3s; }
+        footer a:hover { color: var(--primary); }
+
+        /* === SHARE FLOATING BUTTON === */
+        .share-container { position: fixed; bottom: 25px; right: 25px; z-index: 9000; display: flex; flex-direction: column; align-items: center; gap: 10px; }
+        .share-fab { width: 50px; height: 50px; border-radius: 50%; background: var(--dark); color: white; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; box-shadow: 0 4px 15px rgba(0,0,0,0.3); cursor: pointer; transition: transform 0.3s, background 0.3s; }
+        .share-fab:hover { transform: scale(1.05); background: var(--primary); }
+        .share-menu { list-style: none; display: flex; flex-direction: column; gap: 8px; opacity: 0; pointer-events: none; transform: translateY(20px) scale(0.9); transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); margin: 0; padding: 0; }
+        .share-container.active .share-menu { opacity: 1; pointer-events: all; transform: translateY(0) scale(1); }
+        .share-container.active .share-fab i { transform: rotate(45deg); transition: 0.3s; }
+        .share-item { width: 40px; height: 40px; border-radius: 50%; background: white; color: var(--dark); display: flex; align-items: center; justify-content: center; font-size: 1rem; box-shadow: 0 2px 8px rgba(0,0,0,0.15); text-decoration: none; transition: 0.2s; position: relative; }
+        .share-item:hover { transform: translateX(-3px); color: white; }
+        .share-item.fb:hover { background: #1877F2; }
+        .share-item.x:hover { background: #000; }
+        .share-item.wa:hover { background: #25D366; }
+        .share-item.in:hover { background: #0077b5; }
+        .share-item.tg:hover { background: #0088cc; }
+        .share-item.mail:hover { background: var(--accent); }
+        .share-item.copy:hover { background: var(--gray); }
+        .share-item::before { content: attr(data-tooltip); position: absolute; right: 50px; top: 50%; transform: translateY(-50%); background: rgba(17, 24, 39, 0.9); color: white; padding: 4px 8px; border-radius: 4px; font-size: 0.7rem; white-space: nowrap; opacity: 0; pointer-events: none; transition: 0.2s; box-shadow: 0 2px 5px rgba(0,0,0,0.2); }
+        .share-item:hover::before { opacity: 1; right: 55px; }
+
+        @media (max-width: 900px) {
+            .ricorso-grid { grid-template-columns: 1fr; gap: 2rem; }
+            .nav-links { display: none; }
+            h1 { font-size: 2.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header id="navbar">
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">
+                    <img src="nocemento-ciampino-logo.jpg" alt="Logo No Cemento Ciampino">
+                    No Cemento Ciampino
+                </a>
+                <div class="nav-links" id="navLinks">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="index.html#progetto" class="nav-link">Il Progetto</a>
+                    <a href="index.html#soluzioni" class="nav-link">Le Alternative</a>
+                    <a href="ricorso.html" class="nav-link active-nav">Ricorso TAR</a>
+                    <a href="index.html#contatti" class="btn btn-primary" style="padding: 0.7rem 1.5rem; font-size: 0.9rem;">Unisciti Ora</a>
+                </div>
+                <div class="mobile-toggle" style="color: var(--primary); font-size: 1.5rem; cursor: pointer; display: none;">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero-ricorso">
+        <div class="container">
+            <span class="tag">Campagna Crowdfunding</span>
+            <h1>Salviamo la Vigna <br>della <span style="color: var(--primary); font-style: italic;">Folgarella</span></h1>
+            <p style="margin: 1.5rem auto 0; max-width: 600px; color: rgba(255,255,255,0.9);">
+                Aiutaci a sostenere il Ricorso al TAR per fermare la speculazione e difendere il nostro paesaggio agrario.
+            </p>
+        </div>
+    </section>
+
+    <section class="ricorso-section">
+        <div class="container">
+            <div class="ricorso-grid">
+                
+                <div class="testo-ricorso">
+                    <h2 style="font-size: 2rem;">Il verde è una necessità, <span class="highlight-danger">non un lusso</span></h2>
+                    <p>Immagina di svegliarti ogni mattina con questa vista: filari di vite dorati sotto un arcobaleno, la chiesa lontana, il respiro del verde che entra dalle finestre. Questa è la Vigna della Folgarella oggi — il cuore agricolo di Ciampino, tra via Franchi e via Spada.</p>
+                    
+                    <p>Ma la <strong>delibera n. 2/2026 della Giunta Colella</strong> vuole seppellirla sotto 24.000 mq di cemento commerciale. Usano un <em>Permesso di Costruire Convenzionato</em> al posto del Piano Urbanistico Attuativo previsto dal PRG. Non è urbanistica: è un aggiramento.</p>
+                    
+                    <p>Noi diciamo no. <strong>Stiamo portando il ricorso al TAR Lazio per fermarli.</strong> È una battaglia legale che richiede risorse — avvocati, atti, perizie. Il tuo sostegno economico può ribaltare la partita.</p>
+
+                    <h3 style="margin-top: 3rem; color: var(--dark); font-size: 1.6rem;">La Petizione Popolare</h3>
+                    <p>La petizione popolare (ai sensi dell’art. 2 del Regolamento sulla partecipazione del Comune di Ciampino) chiede al Comune di fermare temporaneamente il permesso di costruire già deliberato per un grande intervento commerciale/residenziale nell’area G4 – quartiere Folgarè/Folgarella e di rivalutare completamente la pianificazione di tutta quell’area con una variante generale al PRG (o strumento equivalente).</p>
+
+                    <p style="margin-bottom: 0.5rem; color: var(--dark);"><strong>I motivi principali:</strong></p>
+                    <ul style="margin-bottom: 1.5rem; padding-left: 1.5rem; color: var(--gray);">
+                        <li>Troppo cemento in un territorio già saturo (41-42% di impermeabilizzazione).</li>
+                        <li>Riduzione drastica del verde pubblico.</li>
+                        <li>Mancanza di VAS (valutazione ambientale strategica).</li>
+                        <li>Necessità di più verde fruibile, permeabilità del suolo, mitigazione clima, parchi, aree giochi, orti urbani, interventi idraulici naturali.</li>
+                    </ul>
+
+                    <p style="margin-bottom: 0.5rem; color: var(--dark);"><strong>Cosa chiediamo concretamente:</strong></p>
+                    <ul style="margin-bottom: 1.5rem; padding-left: 1.5rem; color: var(--gray);">
+                        <li>Sospendere la delibera di Giunta n. 2/2026 e non firmare/rilasciare il permesso di costruire convenzionato.</li>
+                        <li>Valutare una variante generale al PRG per pianificare in modo unitario l’area G4 con: più verde pubblico, attenzione a bambini e anziani, edifici ecosostenibili e soluzioni per l’acqua piovana.</li>
+                        <li>Aprire un tavolo pubblico di confronto con cittadini e associazioni.</li>
+                    </ul>
+
+                    <p style="margin-bottom: 0.5rem; color: var(--dark);"><strong>Cosa serve per partecipare?</strong></p>
+                    <p>La petizione è valida se presentata da cittadini residenti a Ciampino. Basta compilare una riga per persona sul modulo (cartaceo o digitale) con: Nome e Cognome, Luogo e data di nascita, Residenza, Recapito (email o telefono) e Firma autografa.</p>
+
+                    <p style="font-weight: 700; color: var(--primary-dark); font-style: italic; margin-bottom: 2.5rem;">
+                        In breve: se abiti a Ciampino e non vuoi l’ennesimo grande centro commerciale con pochissimo verde in quell’area, firma e fai firmare!
+                    </p>
+
+                    <div class="info-card">
+                        <h3 style="margin-bottom: 1rem; color: var(--dark); font-size: 1.3rem;">Vieni a incontrarci e a firmare</h3>
+                        <p style="margin-bottom: 0.5rem;"><strong>Domenica 12 aprile ore 12:30</strong><br>Parco della Folgarella - Via C.P. Biroli. Partecipa al pranzo sociale, firma la petizione e dona di persona.</p>
+                        <a href="nocemento-ciampino_05.jpeg" target="_blank" style="display: inline-block; margin-top: 0.5rem; color: var(--primary); font-weight: 600; text-decoration: none; font-size: 0.95rem;"><i class="fa-solid fa-image"></i> Guarda la locandina dell'evento</a>
+                        
+                        <p style="margin-top: 1.5rem; margin-bottom: 0.5rem;">Puoi firmare la petizione anche presso:</p>
+                        <ul style="list-style-type: disc; padding-left: 1.5rem; color: var(--gray);">
+                            <li><strong>Fisioterapia Ciampino</strong> – via Pirzio Biroli 117/D</li>
+                            <li><strong>Pizzeria Il Boccale</strong> – viale Kennedy 109</li>
+                        </ul>
+                    </div>
+
+                    <p style="margin-top: 2rem; font-weight: 700; color: var(--dark); font-size: 1.2rem;">
+                        Insieme, dopo la pioggia, faremo spuntare l'arcobaleno.
+                    </p>
+                </div>
+
+                <div class="donation-box">
+                    <h3 style="margin-bottom: 2rem; color: var(--accent); font-size: 1.8rem;">Dona per il Verde</h3>
+                    <p style="font-size: 0.95rem; margin-bottom: 2rem;">Un contributo piccolo o grande: ogni euro conta per tenere viva questa terra e il futuro del quartiere.</p>
+                    
+                    <div class="donation-item">
+                        <span class="donation-label">Intestatario</span>
+                        <span class="donation-value">Officine Civiche APS</span>
+                    </div>
+                    
+                    <div class="donation-item">
+                        <span class="donation-label">IBAN</span>
+                        <span class="donation-value" style="font-family: monospace; letter-spacing: 1px;">IT56I0103039100000000375662</span>
+                    </div>
+                    
+                    <div class="donation-item">
+                        <span class="donation-label">Causale obbligatoria</span>
+                        <span class="donation-value">Ricorso Folgarella</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="contatti" class="cta-section">
+        <div class="cta-bg"></div>
+        <div class="container" style="position: relative; z-index: 2;">
+            <h2>Non restare a guardare</h2>
+            <p style="color: rgba(255,255,255,0.8); margin-bottom: 2rem;">Contattaci per aderire all'iniziativa e conoscere le ultime novità.</p>
+            <a href="mailto:nocementociampino@outlook.it?subject=Voglio%20rimanere%20aggiornato%20sulle%20attivit%C3%A0%20del%20Comitato" class="btn btn-primary" style="font-size: 1.2rem;">Resta aggiornato <i class="fa-regular fa-paper-plane"></i></a>
+            
+            <div style="margin-top: 3rem; display: flex; justify-content: center; gap: 2rem; font-size: 2rem;">
+                <a href="https://www.facebook.com/people/No-Cemento-Ciampino/61588225018829/" target="_blank" style="color: white; transition: 0.3s;" onmouseover="this.style.color='#1877F2'" onmouseout="this.style.color='white'">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+                <a href="https://www.instagram.com/nocementociampino" target="_blank" style="color: white; transition: 0.3s;" onmouseover="this.style.color='#E1306C'" onmouseout="this.style.color='white'">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://www.youtube.com/@Nocementociampino" target="_blank" style="color: white; transition: 0.3s;" onmouseover="this.style.color='#FF0000'" onmouseout="this.style.color='white'">
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2rem; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 2rem; margin-bottom: 2rem;">
+                <div style="flex: 1; min-width: 250px;">
+                    <h4 style="color: white; margin-bottom: 1rem;">Comitato No Cemento</h4>
+                    <p>Cittadini attivi per la tutela del paesaggio agrario e della sicurezza idrogeologica di Ciampino e Ciampino Folgarella e Viale Kennedy.</p>
+                    <p><strong>Disclaimer:</strong> Questo sito è un'iniziativa indipendente di sensibilizzazione civica e non rappresenta una testata giornalistica. Le informazioni e le elaborazioni grafiche pubblicate hanno scopo puramente informativo e qualitativo. Non si garantisce l'assenza di imprecisioni involontarie. I marchi, i loghi e i riferimenti a progetti di terzi appartengono ai legittimi proprietari e sono citati per diritto di cronaca e critica. Il Comitato e gli autori del sito non rispondono di eventuali danni derivanti dall'uso delle informazioni qui presenti né dei contenuti dei siti esterni collegati.</p>
+                </div>
+            </div>
+            <div class="text-center">
+                &copy; 2026 Comitato No Cemento Ciampino. Sito indipendente realizzato da cittadini.
+            </div>
+        </div>
+    </footer>
+
+    <div class="share-container" id="share-container">
+        <ul class="share-menu">
+            <li><a href="#" class="share-item copy" id="copy-link" data-tooltip="Copia Link"><i class="fa-solid fa-link"></i></a></li>
+            <li><a href="mailto:?subject=Sostieni%20il%20Ricorso%20Folgarella&body=Aiutaci%20a%20salvare%20Ciampino.%20Dona%20per%20il%20ricorso:%20https://nocementociampino.it/ricorso.html" class="share-item mail" data-tooltip="Email"><i class="fa-solid fa-envelope"></i></a></li>
+            <li><a href="https://wa.me/?text=Sostieni%20il%20Ricorso%20Folgarella!%20Dona%20ora:%20https://nocementociampino.it/ricorso.html" target="_blank" class="share-item wa" data-tooltip="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a></li>
+            <li><a href="https://t.me/share/url?url=https://nocementociampino.it/ricorso.html&text=Sostieni%20il%20Ricorso%20Folgarella" target="_blank" class="share-item tg" data-tooltip="Telegram"><i class="fa-brands fa-telegram"></i></a></li>
+            <li><a href="https://www.linkedin.com/sharing/share-offsite/?url=https://nocementociampino.it/ricorso.html" target="_blank" class="share-item in" data-tooltip="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a></li>
+            <li><a href="https://twitter.com/intent/tweet?text=Sostieni%20il%20Ricorso%20Folgarella%20a%20Ciampino!&url=https://nocementociampino.it/ricorso.html" target="_blank" class="share-item x" data-tooltip="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a></li>
+            <li><a href="https://www.facebook.com/sharer/sharer.php?u=https://nocementociampino.it/ricorso.html" target="_blank" class="share-item fb" data-tooltip="Facebook"><i class="fa-brands fa-facebook-f"></i></a></li>
+        </ul>
+        <div class="share-fab" id="share-fab">
+            <i class="fa-solid fa-share-nodes"></i>
+        </div>
+    </div>
+
+    <script>
+        // Header Scroll Effect
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('navbar');
+            header.classList.toggle('scrolled', window.scrollY > 50);
+        });
+
+        // Mobile Menu Toggle
+        const menuBtn = document.querySelector('.mobile-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        
+        if(window.innerWidth < 768) {
+            menuBtn.style.display = 'block';
+        }
+
+        menuBtn.addEventListener('click', () => {
+            if (navLinks.style.display === 'flex') {
+                navLinks.style.display = 'none';
+            } else {
+                navLinks.style.display = 'flex';
+                navLinks.style.flexDirection = 'column';
+                navLinks.style.position = 'absolute';
+                navLinks.style.top = '100%';
+                navLinks.style.left = '0';
+                navLinks.style.width = '100%';
+                navLinks.style.background = 'white';
+                navLinks.style.padding = '2rem';
+                navLinks.style.boxShadow = '0 10px 20px rgba(0,0,0,0.1)';
+                
+                document.querySelectorAll('.nav-link').forEach(link => {
+                    link.style.color = 'var(--dark)';
+                    link.style.marginBottom = '1rem';
+                });
+            }
+        });
+
+        // Logica del Tasto Share
+        const shareFab = document.getElementById('share-fab');
+        const shareContainer = document.getElementById('share-container');
+        const copyLinkBtn = document.getElementById('copy-link');
+
+        if(shareFab && shareContainer) {
+            shareFab.addEventListener('click', () => {
+                shareContainer.classList.toggle('active');
+            });
+
+            // Chiudi il menù share se si clicca fuori
+            document.addEventListener('click', (e) => {
+                if (!shareContainer.contains(e.target)) {
+                    shareContainer.classList.remove('active');
+                }
+            });
+        }
+
+        // Copia link
+        if(copyLinkBtn) {
+            copyLinkBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                const url = window.location.href;
+                navigator.clipboard.writeText(url).then(() => {
+                    const originalIcon = copyLinkBtn.innerHTML;
+                    copyLinkBtn.innerHTML = '<i class="fa-solid fa-check"></i>';
+                    copyLinkBtn.style.background = 'var(--primary)';
+                    copyLinkBtn.style.color = 'white';
+                    setTimeout(() => {
+                        copyLinkBtn.innerHTML = originalIcon;
+                        copyLinkBtn.style.background = 'white';
+                        copyLinkBtn.style.color = 'var(--dark)';
+                    }, 2000);
+                });
+            });
+        }
+    </script>
+</body>
+</html>

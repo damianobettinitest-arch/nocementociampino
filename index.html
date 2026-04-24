@@ -1,0 +1,1334 @@
+﻿<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salviamo Ciampino Folgarella e Viale Kennedy | No Cemento Ciampino</title>
+    <meta name="description" content="Stop al progetto a Ciampino: 23.800mq di area a rischio. Sostieni la richiesta di vero verde pubblico e tutela di Viale Kennedy">
+    
+    <meta property="og:site_name" content="No Cemento Ciampino">
+    <meta property="og:url" content="https://nocementociampino.it"> 
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Fermiamo la colata a Ciampino: Salviamo Viale Kennedy">
+    <meta property="og:description" content="23.800mq di cemento al posto del verde? Noi diciamo NO. Scopri il progetto alternativo e unisciti al comitato.">
+    <meta property="og:image" content="https://nocementociampino.it/nocemento-ciampino-logo.jpg">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="it_IT">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Salviamo Ciampino Folgarella e Viale Kennedy">
+    <meta name="twitter:description" content="Stop al progetto da 23.800mq. Sostienici per chiedere verde pubblico vero.">
+    <meta name="twitter:image" content="https://nocementociampino.it/nocemento-ciampino-logo.jpg">
+
+    <link rel="icon" type="image/jpeg" href="https://nocementociampino.it/nocemento-ciampino-logo.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;900&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">    
+    
+    <style>
+        /* === VARIABILI MATERIAL 2026 & CONFIGURAZIONE === */
+        :root {
+            /* Palette Verde Vivace & Ecologica */
+            --primary: #10b981; 
+            --primary-light: #34d399;
+            --primary-dark: #059669;
+            --primary-deep: #064e3b;
+            
+            --accent: #f59e0b;
+            --accent-light: #fbbf24;
+            --danger: #ef4444;
+            --danger-light: #fca5a5;
+            
+            /* Sfondi ed Elementi Neutri */
+            --dark: #1e293b; /* Slate più morbido invece di nero */
+            --gray: #64748b;
+            --light: #f8fafc;
+            --surface: #ffffff;
+            
+            /* Gradienti Vivaci */
+            --grad-primary: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            --grad-accent: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%);
+            --grad-hero: linear-gradient(135deg, rgba(6, 78, 59, 0.85) 0%, rgba(16, 185, 129, 0.65) 100%);
+            --grad-bg-soft: linear-gradient(180deg, #f0fdf4 0%, #ffffff 100%);
+            
+            /* Ombre Colorate (Material 3) */
+            --shadow-sm: 0 4px 10px -2px rgba(16, 185, 129, 0.1);
+            --shadow-md: 0 10px 25px -5px rgba(16, 185, 129, 0.15);
+            --shadow-lg: 0 25px 50px -12px rgba(16, 185, 129, 0.25);
+            --shadow-danger: 0 10px 25px -5px rgba(239, 68, 68, 0.2);
+            
+            --font-main: 'Outfit', sans-serif;
+            --font-serif: 'Playfair Display', serif;
+        }
+
+        /* === RESET & BASE === */
+        * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+        body { 
+            font-family: var(--font-main); 
+            color: var(--dark); 
+            background: var(--light); 
+            line-height: 1.6; 
+            overflow-x: hidden; 
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        h1, h2, h3, h4 { line-height: 1.2; margin-bottom: 1rem; color: var(--primary-deep); }
+        h1 { font-family: var(--font-serif); font-size: clamp(2.5rem, 6vw, 4.5rem); font-weight: 700; letter-spacing: -0.02em; }
+        h2 { font-size: clamp(2rem, 4vw, 3rem); font-weight: 800; letter-spacing: -0.01em; }
+        p { margin-bottom: 1.5rem; font-size: 1.125rem; color: var(--gray); }
+        
+        /* Testo gradiente */
+        .highlight { 
+            background: var(--grad-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            color: var(--primary);
+            display: inline-block;
+        }
+        .highlight-danger { color: var(--danger); }
+        .text-center { text-align: center; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+
+        /* === COMPONENTI MATERIAL === */
+        .btn {
+            display: inline-flex; align-items: center; justify-content: center; gap: 0.6rem;
+            padding: 1rem 2.2rem; border-radius: 50px; font-weight: 700; text-transform: uppercase;
+            letter-spacing: 0.05em; transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+            text-decoration: none; border: none; cursor: pointer; position: relative; overflow: hidden;
+            z-index: 1;
+        }
+        .btn::before {
+            content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(255,255,255,0.2); opacity: 0; transition: opacity 0.3s; z-index: -1;
+        }
+        .btn:hover::before { opacity: 1; }
+        .btn:hover { transform: translateY(-4px) scale(1.02); }
+        
+        .btn-primary { background: var(--grad-primary); color: white; box-shadow: var(--shadow-md); }
+        .btn-primary:hover { box-shadow: var(--shadow-lg); }
+        
+        .btn-outline { background: rgba(255, 255, 255, 0.1); border: 2px solid white; color: white; backdrop-filter: blur(5px); }
+        .btn-outline:hover { background: white; color: var(--primary-deep); border-color: white; box-shadow: var(--shadow-md); }
+        
+        .btn-accent { background: var(--grad-accent); color: white; box-shadow: 0 10px 25px -5px rgba(245, 158, 11, 0.3); }
+        .btn-accent:hover { box-shadow: 0 20px 40px -10px rgba(245, 158, 11, 0.4); }
+
+        .btn-danger { background: linear-gradient(135deg, var(--danger) 0%, #dc2626 100%); color: white; box-shadow: var(--shadow-danger); }
+        .btn-danger:hover { box-shadow: 0 20px 40px -10px rgba(239, 68, 68, 0.4); }
+
+        .tag {
+            display: inline-block; padding: 0.4rem 1rem; border-radius: 50px;
+            font-size: 0.75rem; font-weight: 800; text-transform: uppercase; margin-bottom: 1.5rem;
+            letter-spacing: 0.05em;
+        }
+        .tag-red { background: linear-gradient(135deg, #fef2f2 0%, #fee2e2 100%); color: var(--danger); box-shadow: 0 4px 10px rgba(239,68,68,0.1); }
+        .tag-green { background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%); color: var(--primary-dark); box-shadow: var(--shadow-sm); }
+
+        .feature-img {
+            width: 100%; height: auto; border-radius: 32px; box-shadow: var(--shadow-lg);
+            margin-bottom: 2rem; transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+        .feature-img:hover { transform: scale(1.02); }
+
+        /* === HEADER GLASSMORPHISM === */
+        header {
+            position: fixed; top: 0; width: 100%; z-index: 1000;
+            padding: 1.2rem 0; transition: all 0.4s ease;
+        }
+        header.scrolled { 
+            background: rgba(255, 255, 255, 0.85); 
+            backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+            padding: 0.8rem 0; 
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05); 
+            border-bottom: 1px solid rgba(255,255,255,0.3);
+        }
+        header.scrolled .nav-link { color: var(--dark); }
+        
+        nav { display: flex; justify-content: space-between; align-items: center; }
+        
+        .logo { 
+            display: flex; align-items: center; gap: 0.8rem;
+            text-decoration: none; font-weight: 800; font-size: 1.2rem; color: white; 
+            text-shadow: 0 2px 4px rgba(0,0,0,0.2); transition: 0.3s;
+        }
+        .logo img { height: 50px; width: auto; border-radius: 50%; border: 3px solid rgba(255,255,255,0.8); transition: 0.3s; }
+        header.scrolled .logo { color: var(--primary-deep); text-shadow: none; }
+        header.scrolled .logo img { border-color: var(--primary-light); }
+
+        .nav-links { display: none; gap: 2.5rem; align-items: center; }
+        .nav-link { color: white; text-decoration: none; font-weight: 600; transition: 0.3s; font-size: 0.95rem; }
+        .nav-link:hover { color: var(--primary-light); transform: translateY(-2px); }
+        .nav-link.active-nav { color: var(--primary-light); }
+        header.scrolled .nav-link:hover { color: var(--primary); }
+        header.scrolled .nav-link.active-nav { color: var(--primary); }
+
+        /* === HERO SECTION === */
+        .hero {
+            position: relative; min-height: 100vh; display: flex; align-items: center;
+            background: var(--grad-hero), url('https://images.unsplash.com/photo-1595844828135-2d667c4e5127?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover; background-position: center; background-attachment: fixed;
+            color: white; 
+            padding-top: 100px; padding-bottom: 10rem; 
+        }
+        .hero::after {
+            content: ''; position: absolute; bottom: 0; left: 0; width: 100%; height: 150px;
+            background: linear-gradient(to top, var(--light) 0%, transparent 100%);
+        }
+        .hero-content { max-width: 850px; position: relative; z-index: 2; }
+        .hero p { color: rgba(255,255,255,0.9); font-size: 1.25rem; max-width: 600px; text-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .hero h1 { color: white; text-shadow: 0 4px 20px rgba(0,0,0,0.15); margin-bottom: 1.5rem; }
+
+        /* === DATA CARDS === */
+        .stats-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2.5rem;
+            margin-top: -7rem; 
+            position: relative; z-index: 10; padding-bottom: 4rem;
+        }
+        .stat-card {
+            background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px);
+            padding: 3rem 2rem; border-radius: 32px; box-shadow: var(--shadow-lg);
+            text-align: center; transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+            position: relative; overflow: hidden; border: 1px solid rgba(255,255,255,0.5);
+        }
+        .stat-card::before {
+            content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 6px;
+            background: var(--grad-primary);
+        }
+        .stat-card.danger::before { background: linear-gradient(90deg, var(--danger) 0%, var(--danger-light) 100%); }
+        .stat-card:hover { transform: translateY(-12px); box-shadow: 0 30px 60px -15px rgba(16, 185, 129, 0.3); }
+        .stat-number { display: block; font-size: 4rem; font-weight: 900; line-height: 1; margin-bottom: 0.5rem; color: var(--primary-deep); }
+        .stat-card.danger .stat-number { color: var(--danger); }
+        .stat-label { font-size: 0.95rem; text-transform: uppercase; font-weight: 700; letter-spacing: 1px; color: var(--gray); }
+
+        /* === SECTIONS === */
+        .split-section { padding: 6rem 0; background: var(--light); position: relative; }
+        .comparison-container { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; margin-top: 4rem; align-items: start; }
+        
+        .project-details ul { list-style: none; margin-top: 2rem; }
+        .project-details li { margin-bottom: 1.5rem; padding-left: 2.5rem; position: relative; font-size: 1.05rem; }
+        .project-details li::before { 
+            content: '✕'; position: absolute; left: 0; top: 2px;
+            color: white; background: var(--danger); width: 24px; height: 24px; 
+            border-radius: 50%; display: flex; align-items: center; justify-content: center; 
+            font-size: 0.7rem; font-weight: 800; box-shadow: 0 4px 10px rgba(239,68,68,0.3);
+        }
+        
+        .progress-bar-container { margin: 2.5rem 0; background: white; padding: 1.5rem; border-radius: 20px; box-shadow: var(--shadow-sm); }
+        .progress-label { display: flex; justify-content: space-between; font-size: 1rem; font-weight: 800; margin-bottom: 1rem; color: var(--dark); }
+        .progress-track { background: #e2e8f0; height: 16px; border-radius: 50px; overflow: hidden; box-shadow: inset 0 2px 4px rgba(0,0,0,0.05); }
+        .progress-fill { height: 100%; background: linear-gradient(90deg, var(--danger) 0%, #f87171 100%); width: 93%; border-radius: 50px; position: relative;}
+        .progress-fill::after { content:''; position:absolute; top:0; left:0; right:0; bottom:0; background: linear-gradient(rgba(255,255,255,0.2), transparent); }
+
+        .vs-card {
+            background: white; border-radius: 32px; overflow: hidden; box-shadow: var(--shadow-lg);
+            display: grid; grid-template-columns: 1fr 1fr; position: relative;
+        }
+        .vs-col { padding: 4rem 3rem; }
+        .vs-bad { background: linear-gradient(180deg, #fff1f2 0%, #ffffff 100%); border-right: 1px solid #ffe4e6; }
+        .vs-good { background: linear-gradient(180deg, #ecfdf5 0%, #ffffff 100%); }
+        .vs-item { margin-bottom: 2.5rem; border-bottom: 1px solid rgba(0,0,0,0.04); padding-bottom: 1.5rem; }
+        .vs-item:last-child { border: none; margin-bottom: 0; padding-bottom: 0; }
+        .vs-label { font-size: 0.85rem; text-transform: uppercase; color: var(--gray); display: block; margin-bottom: 0.5rem; font-weight: 700; letter-spacing: 0.05em; }
+        .vs-value { font-size: 1.4rem; font-weight: 800; color: var(--dark); }
+        .vs-bad .highlight-danger { background: linear-gradient(135deg, var(--danger) 0%, #b91c1c 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+
+        .visual-container { position: relative; border-radius: 32px; overflow: hidden; box-shadow: var(--shadow-lg); background: white; padding: 1rem; }
+        .visual-container img { width: 100%; height: auto; display: block; border-radius: 20px; }
+        
+        /* === HERO BUTTONS === */
+        .hero-buttons-container { margin-top: 2.5rem; display: flex; gap: 1rem; align-items: stretch; flex-wrap: wrap; }
+        .hero-btn { padding: 1rem 1.8rem; }
+        .btn-text-col { display: flex; flex-direction: column; text-align: left; line-height: 1.2; }
+        .event-date { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; opacity: 0.9; margin-bottom: 2px; }
+        .event-title { font-weight: 800; font-size: 1.05rem; }
+
+        /* === RAIN GARDEN CARD === */
+        .rain-garden-card {
+            margin-top: 5rem; background: linear-gradient(135deg, #ffffff 0%, #f0fdf4 100%); 
+            padding: 3rem; border-radius: 32px; display: flex; gap: 3rem; align-items: center; 
+            box-shadow: var(--shadow-md); border: 1px solid rgba(16,185,129,0.1);
+        }
+        .rain-garden-img { width: 300px; height: 220px; border-radius: 24px; object-fit: cover; flex-shrink: 0; box-shadow: var(--shadow-sm); }
+
+        /* === PRESS SECTION === */
+        .press-grid {
+            display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 2rem;
+            margin-top: 3rem;
+        }
+        .press-item {
+            background: white; padding: 2rem; border-radius: 24px; box-shadow: var(--shadow-sm);
+            text-decoration: none; color: var(--dark); transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+            border: 1px solid rgba(0,0,0,0.03); display: flex; flex-direction: column; justify-content: space-between;
+            position: relative; overflow: hidden;
+        }
+        .press-item::before {
+            content: ''; position: absolute; top: 0; left: 0; width: 4px; height: 100%;
+            background: var(--grad-primary); opacity: 0; transition: 0.3s;
+        }
+        .press-item:hover::before { opacity: 1; }
+        .press-item:hover { transform: translateY(-5px); box-shadow: var(--shadow-lg); }
+        .press-source { font-size: 0.85rem; text-transform: uppercase; color: var(--primary-dark); font-weight: 800; margin-bottom: 1rem; letter-spacing: 0.05em; }
+        .press-title { font-weight: 700; font-size: 1.1rem; line-height: 1.5; }
+        .press-icon { margin-top: 1.5rem; text-align: right; color: var(--primary-light); font-size: 1.2rem; transition: 0.3s; }
+        .press-item:hover .press-icon { color: var(--primary); transform: translateX(5px); }
+        
+        .badge-new {
+            background: linear-gradient(135deg, var(--accent) 0%, #d97706 100%); color: white; font-size: 0.65rem; padding: 4px 10px;
+            border-radius: 50px; margin-left: 10px; vertical-align: text-bottom; font-weight: 800;
+            text-transform: uppercase; display: inline-block; animation: pulse-new 2s infinite ease-in-out;
+            box-shadow: 0 4px 10px rgba(245, 158, 11, 0.3);
+        }
+
+        @keyframes pulse-new {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        /* === DOCS SECTION === */
+        .docs-section { background: var(--grad-bg-soft); padding: 6rem 0; position: relative; }
+        .doc-box {
+            background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(10px);
+            border-radius: 32px; padding: 3rem; border: 1px solid rgba(255,255,255,0.5);
+            box-shadow: var(--shadow-lg); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 3rem;
+        }
+        .doc-actions { display: flex; gap: 1rem; flex-wrap: wrap; justify-content: flex-end; }
+
+        /* === CTA SECTION (Vibrant Gradient) === */
+        .cta-section { 
+            background: var(--grad-primary); 
+            color: white; padding: 8rem 0; text-align: center; position: relative; overflow: hidden; 
+        }
+        .cta-bg { 
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0.15; 
+            background: url('https://www.transparenttextures.com/patterns/cubes.png'); 
+            mix-blend-mode: overlay;
+        }
+        .cta-section h2 { color: white; font-size: 3.5rem; text-shadow: 0 4px 20px rgba(0,0,0,0.1); }
+        .cta-section .btn-primary { background: white; color: var(--primary-deep); }
+        .cta-section .btn-primary:hover { background: var(--light); box-shadow: 0 15px 30px rgba(0,0,0,0.2); }
+
+        /* === FOOTER === */
+        footer { background: var(--dark); color: #94a3b8; padding: 5rem 0 2rem; font-size: 0.95rem; }
+        footer a { color: white; text-decoration: none; transition: 0.3s; font-weight: 500; }
+        footer a:hover { color: var(--primary-light); }
+        footer h4 { color: white; font-size: 1.2rem; }
+
+        /* === LIGHTBOX SLIDER === */
+        .lightbox-overlay {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(15, 23, 42, 0.95); z-index: 10001; 
+            display: flex; align-items: center; justify-content: center;
+            opacity: 0; pointer-events: none; transition: opacity 0.4s ease; padding: 1rem;
+            backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+        }
+        .lightbox-overlay.open { opacity: 1; pointer-events: all; }
+        .lightbox-img {
+            max-width: 95vw; max-height: 90vh; border-radius: 16px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            transform: scale(0.95); transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+            object-fit: contain;
+        }
+        .lightbox-overlay.open .lightbox-img { transform: scale(1); }
+        .lightbox-close {
+            position: absolute; top: 25px; right: 25px; background: rgba(255,255,255,0.1); border: none;
+            width: 50px; height: 50px; border-radius: 50%; backdrop-filter: blur(5px);
+            font-size: 1.8rem; color: white; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: 0.3s; z-index: 10;
+        }
+        .lightbox-close:hover { background: var(--danger); transform: rotate(90deg); }
+        .slide img { cursor: zoom-in; }
+
+        /* === MOBILE === */
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5rem; }
+            .nav-links { display: none; }
+            .comparison-container { grid-template-columns: 1fr; gap: 3rem; }
+            .vs-card { grid-template-columns: 1fr; }
+            .vs-bad { border-right: none; border-bottom: 1px solid #ffe4e6; }
+            .stats-grid { padding: 0 1.5rem 2rem; margin-top: -4rem; }
+            .hero { padding-bottom: 6rem; }
+            .doc-box { flex-direction: column; text-align: center; padding: 2rem; }
+            .doc-actions { justify-content: center; width: 100%; }
+            .doc-actions .btn { width: 100%; justify-content: center; font-size: 0.95rem; padding: 1rem; }
+            .rain-garden-card { flex-direction: column; padding: 2rem; text-align: left; }
+            .rain-garden-img { width: 100%; height: auto; max-height: 250px; margin-bottom: 1.5rem; }
+            .hero-buttons-container { flex-direction: column; gap: 1.2rem; }
+            .hero-btn { width: 100%; justify-content: center; }
+            .btn-text-col { text-align: center; }
+            .vs-col { padding: 2.5rem 2rem; }
+        }
+
+        /* ANIMAZIONI */
+        .reveal { opacity: 0; transform: translateY(40px); transition: 0.8s cubic-bezier(0.34, 1.56, 0.64, 1); }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+
+       /* --- Cookie Banner --- */
+       #cookie-banner {
+           position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%);
+           width: 90%; max-width: 650px;
+           background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); color: var(--dark);
+           padding: 1.5rem; border-radius: 24px;
+           box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+           z-index: 9999; display: none; border: 1px solid rgba(255,255,255,0.5);
+           animation: slideUp 0.6s cubic-bezier(0.34, 1.56, 0.64, 1); font-size: 0.95rem;
+       }
+       @keyframes slideUp { from { transform: translate(-50%, 100px); opacity: 0; } to { transform: translate(-50%, 0); opacity: 1; } }
+       
+       .cookie-content { display: flex; flex-direction: column; gap: 1rem; text-align: center; }
+       @media(min-width: 768px) { 
+           .cookie-content { flex-direction: row; align-items: center; text-align: left; gap: 2rem; } 
+           .cookie-actions { margin-left: auto; display: flex; gap: 0.8rem; flex-shrink: 0; }
+       }
+       .cookie-btn { padding: 0.6rem 1.2rem; border-radius: 50px; font-weight: 700; cursor: pointer; border: none; font-family: var(--font-main); transition: 0.3s; font-size: 0.9rem; }
+       .cookie-accept { background: var(--grad-primary); color: white; box-shadow: var(--shadow-sm); }
+       .cookie-accept:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
+       .cookie-reject { background: var(--light); color: var(--gray); border: 1px solid #e2e8f0; }
+       .cookie-reject:hover { background: #e2e8f0; color: var(--dark); }
+
+       /* --- Share Floating Button --- */
+       .share-container { 
+           position: fixed; bottom: 30px; right: 30px; z-index: 9000; 
+           display: flex; flex-direction: column; align-items: center; gap: 12px; 
+       }
+       .share-fab {
+           width: 56px; height: 56px; border-radius: 50%; background: var(--grad-primary); color: white;
+           display: flex; align-items: center; justify-content: center; font-size: 1.4rem;
+           box-shadow: var(--shadow-md); cursor: pointer; transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s;
+       }
+       .share-fab:hover { transform: scale(1.1); box-shadow: var(--shadow-lg); }
+       .share-menu { 
+           list-style: none; display: flex; flex-direction: column; gap: 10px; 
+           opacity: 0; pointer-events: none; transform: translateY(20px) scale(0.9); 
+           transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1); margin: 0; padding: 0; 
+       }
+       .share-container.active .share-menu { opacity: 1; pointer-events: all; transform: translateY(0) scale(1); }
+       .share-container.active .share-fab i { transform: rotate(45deg); transition: 0.4s; }
+       
+       .share-item {
+           width: 44px; height: 44px; border-radius: 50%; background: white; color: var(--dark);
+           display: flex; align-items: center; justify-content: center; font-size: 1.1rem;
+           box-shadow: 0 4px 12px rgba(0,0,0,0.1); text-decoration: none; transition: 0.3s; position: relative;
+       }
+       .share-item:hover { transform: translateX(-5px) scale(1.1); color: white; }
+       .share-item.fb:hover { background: #1877F2; }
+       .share-item.x:hover { background: #000; }
+       .share-item.wa:hover { background: #25D366; }
+       .share-item.in:hover { background: #0077b5; }
+       .share-item.tg:hover { background: #0088cc; }
+       .share-item.mail:hover { background: var(--accent); }
+       .share-item.copy:hover { background: var(--primary); }
+       
+       .share-item::before {
+           content: attr(data-tooltip); position: absolute; right: 60px; top: 50%; transform: translateY(-50%);
+           background: var(--dark); color: white; padding: 6px 12px; border-radius: 8px; 
+           font-size: 0.8rem; font-weight: 600; white-space: nowrap; opacity: 0; pointer-events: none; transition: 0.3s;
+           box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+       }
+       .share-item:hover::before { opacity: 1; right: 55px; }
+       
+       /* === VIDEO RESPONSIVE === */
+        .video-wrapper {
+            position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;
+            border-radius: 32px; box-shadow: var(--shadow-lg); background: #000;
+            border: 6px solid white; margin-bottom: 1.5rem;
+        }
+        .video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
+        
+        /* === STILE MODALE EVENTO/TRAGUARDO === */
+        .pulse-green-animation { animation: pulse-green 2.5s infinite cubic-bezier(0.66, 0, 0, 1); }
+        @keyframes pulse-green {
+            0% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.6); }
+            70% { box-shadow: 0 0 0 15px rgba(16, 185, 129, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+        }
+
+        .modal-overlay {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(15, 23, 42, 0.85); z-index: 10000; 
+            display: flex; align-items: center; justify-content: center;
+            opacity: 0; pointer-events: none; transition: opacity 0.4s ease; backdrop-filter: blur(8px); padding: 1rem;
+        }
+        .modal-overlay.open { opacity: 1; pointer-events: all; }
+        .modal-box {
+            background: white; width: 100%; max-width: 550px; border-radius: 32px; position: relative;
+            transform: scale(0.95); transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+            max-height: 95vh; overflow-y: auto; box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.4);
+        }
+        .modal-overlay.open .modal-box { transform: scale(1); }
+        .modal-body { padding: 3rem; display: flex; flex-direction: column; }
+        .modal-img { width: 100%; height: auto; border-radius: 16px; box-shadow: var(--shadow-sm); margin-bottom: 2rem; }
+        .modal-close {
+            position: absolute; top: 15px; right: 20px; background: rgba(0,0,0,0.05); border: none;
+            width: 40px; height: 40px; border-radius: 50%;
+            font-size: 1.5rem; color: var(--gray); cursor: pointer; display: flex; align-items: center; justify-content: center; transition: 0.3s; z-index: 10;
+        }
+        .modal-close:hover { background: var(--danger-light); color: var(--danger); transform: rotate(90deg); }
+        .modal-actions { display: flex; gap: 1rem; justify-content: center; }
+        .modal-actions .btn { width: 100%; font-size: 0.95rem; padding: 1rem; }
+        @media (max-height: 700px) { .modal-body { padding: 2rem; } .modal-img { max-height: 45vh; object-fit: contain; } }
+
+        /* === STILE SLIDER PROGETTO === */
+        .project-gallery-wrapper { margin-top: 5rem; margin-bottom: 3rem; position: relative; width: 100%; overflow: hidden; padding-bottom: 2rem; }
+        .slider-container { position: relative; width: 100%; max-width: 1000px; margin: 0 auto; border-radius: 32px; overflow: hidden; box-shadow: var(--shadow-lg); background: #000; aspect-ratio: 16/9; border: 4px solid white;}
+        .slider-track { display: flex; height: 100%; transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1); }
+        .slide { min-width: 100%; height: 100%; position: relative; }
+        .slide img { width: 100%; height: 100%; object-fit: cover; display: block; }
+        .slide-caption { position: absolute; bottom: 0; left: 0; width: 100%; padding: 4rem 2rem 2rem; background: linear-gradient(to top, rgba(15,23,42,0.95) 0%, rgba(15,23,42,0) 100%); color: white; text-align: center; font-weight: 600; font-size: 1.2rem; text-shadow: 0 2px 8px rgba(0,0,0,0.5); pointer-events: none; }
+        .slider-nav-btn { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(255,255,255,0.95); color: var(--primary-deep); border: none; width: 56px; height: 56px; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; font-size: 1.4rem; transition: 0.3s; box-shadow: 0 10px 20px rgba(0,0,0,0.15); z-index: 10; backdrop-filter: blur(5px); }
+        .slider-nav-btn:hover { background: var(--grad-primary); color: white; transform: translateY(-50%) scale(1.1); box-shadow: var(--shadow-md); }
+        .slider-nav-btn.prev { left: 20px; }
+        .slider-nav-btn.next { right: 20px; }
+        .slider-dots { position: absolute; bottom: -45px; left: 50%; transform: translateX(-50%); display: flex; gap: 12px; z-index: 10; }
+        .dot { width: 14px; height: 14px; border-radius: 50%; background: #cbd5e1; cursor: pointer; transition: 0.4s cubic-bezier(0.34, 1.56, 0.64, 1); box-shadow: inset 0 2px 4px rgba(0,0,0,0.1); }
+        .dot.active { background: var(--grad-primary); transform: scale(1.4); box-shadow: 0 4px 10px rgba(16,185,129,0.3); }
+        @media (max-width: 768px) { 
+            .slider-container { aspect-ratio: 4/3; border-radius: 24px; border-width: 2px;} 
+            .slide-caption { font-size: 1rem; padding: 3rem 1.5rem 1.5rem; } 
+            .slider-nav-btn { width: 44px; height: 44px; font-size: 1.1rem; } 
+            .slider-nav-btn.prev { left: 10px; } 
+            .slider-nav-btn.next { right: 10px; } 
+        }
+    </style>
+
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "name": "Comitato No Cemento Ciampino",
+          "url": "https://nocementociampino.it/",
+          "logo": "https://nocementociampino.it/nocemento-ciampino-logo.jpg",
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "email": "nocementociampino@outlook.it",
+            "contactType": "customer support"
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "È già tutto deciso per il progetto di Viale Kennedy?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "No. La Giunta ha approvato lo schema, ma manca ancora la firma della convenzione notarile definitiva. C'è spazio politico per chiedere varianti migliorative."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Cosa prevede il progetto attuale?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Il progetto prevede 23.800 mq di edificazione, con il 93% destinato a commerciale/uffici e solo 74 nuovi alberi, trasformando un'area agricola in un polo cementificato."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Cosa propone il Comitato No Cemento?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Proponiamo l'uso di Rain Gardens per la gestione dell'acqua, un bosco didattico pubblico al posto dei campi sportivi privati e una permeabilità del suolo al 50%."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+</head>
+<body>
+
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WM4QC78Z" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    
+    <header id="navbar">
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">
+                    <img src="nocemento-ciampino-logo.jpg" alt="Logo No Cemento Ciampino">
+                    No Cemento Ciampino
+                </a>
+                <div class="nav-links" id="navLinks">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="index.html#progetto" class="nav-link">Il Progetto</a>
+                    <a href="index.html#soluzioni" class="nav-link">Le Alternative</a>
+                    <a href="ricorso.html" class="nav-link">Ricorso TAR</a>
+                    <a href="index.html#contatti" class="btn btn-primary" style="padding: 0.7rem 1.8rem; font-size: 0.95rem;">Unisciti Ora</a>
+                </div>
+                <div class="mobile-toggle" style="color: var(--primary); font-size: 1.5rem; cursor: pointer; display: none;">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container hero-content reveal">
+            <span class="tag tag-green" style="background: rgba(255,255,255,0.25); color: white; backdrop-filter: blur(5px);">Ciampino Folgarella e Viale Kennedy </span>
+            <h1>Fermiamo la colata.<br>Salviamo il nostro <span class="highlight" style="color: var(--primary-light); background: none; -webkit-text-fill-color: initial; font-style: italic;">Futuro.</span></h1>
+            <div class="hero-buttons-container">
+                <button id="btn-open-milestone" class="btn btn-primary pulse-green-animation hero-btn">
+                    <i class="fa-solid fa-trophy" style="font-size: 1.5rem; color: #fbbf24;"></i>
+                    <div class="btn-text-col">
+                        <span class="event-date" style="color: rgba(255,255,255,0.9);">Grazie Ciampino!</span>
+                        <span class="event-title">Traguardo 7.000€ per il TAR</span>
+                    </div>
+                </button>
+                <a href="ricorso.html" class="btn btn-accent hero-btn">
+                    <i class="fa-solid fa-scale-balanced" style="font-size: 1.5rem;"></i>
+                    <div class="btn-text-col">
+                        <span class="event-date" style="color: rgba(255,255,255,0.9);">Ricorso TAR</span>
+                        <span class="event-title">La Raccolta Continua</span>
+                    </div>
+                </a>
+                <a href="#soluzioni" class="btn btn-primary hero-btn" style="background: white; color: var(--primary-deep);">Scopri la proposta</a>
+                <a href="#progetto" class="btn btn-outline hero-btn">Leggi i Dati</a>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="stats-grid reveal">
+            <div class="stat-card danger">
+                <span class="stat-number highlight-danger">93%</span>
+                <span class="stat-label">Commerciale / Uffici</span>
+                <p style="font-size: 0.95rem; margin-top: 1rem; color: var(--gray);">Solo il 7% sarà residenziale. Di fatto un grande polo commerciale, pur non dichiarandosi tale negli atti.</p>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number">315</span>
+                <span class="stat-label">Nuovi Posti Auto</span>
+                <p style="font-size: 0.95rem; margin-top: 1rem; color: var(--gray);">Una vasta area asfaltata (173 privati) dove oggi c'è una preziosa vigna urbana.</p>
+            </div>
+            <div class="stat-card danger">
+                <span class="stat-number highlight-danger">17%</span>
+                <span class="stat-label">Suolo Permeabile Attuale</span>
+                <p style="font-size: 0.95rem; margin-top: 1rem; color: var(--gray);">Un rischio allagamenti che riteniamo accresciuto rispetto al terreno lasciato libero di assorbire le piogge.</p>
+            </div>
+        </div>
+    </div>
+
+    <section id="progetto" class="split-section">
+        <div class="container">
+            <div class="text-center reveal" style="max-width: 800px; margin: 0 auto 4rem;">
+                <span class="tag tag-red">Il Rischio</span>
+                <h2>La situazione <span class="highlight-danger">e il progetto</span></h2>
+                <p>Un intervento che di fatto trasforma uno degli ultimi "paesaggi agrari di continuità" in un complesso fortemente cementificato. Ecco la mappa della saturazione del quadrante Kennedy.</p>
+            </div>
+            
+            <div class="reveal" style="max-width: 900px; margin: 0 auto 4rem;">
+                <a href="https://www.youtube.com/watch?v=eWs_v-6bza8" target="_blank" class="video-wrapper" style="display: block; padding-bottom:0; height:auto; text-decoration: none;">
+                    <img src="https://img.youtube.com/vi/eWs_v-6bza8/maxresdefault.jpg" alt="Video No Cemento Ciampino" style="width: 100%; display: block; height: auto;">
+                    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 80px; height: 80px; background: rgba(239, 68, 68, 0.9); border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: 0.3s; box-shadow: 0 10px 30px rgba(239,68,68,0.5);">
+                        <i class="fa-solid fa-play" style="color: white; font-size: 2.2rem; margin-left: 5px;"></i>
+                    </div>
+                </a>
+                <p class="text-center" style="font-size: 1rem; color: var(--gray); margin-top: 1.5rem; font-weight: 500;">
+                    <i class="fa-brands fa-youtube" style="color: var(--danger); font-size: 1.2rem; vertical-align: middle;"></i> Clicca per guardare il video esplicativo su YouTube.
+                </p>
+            </div>
+
+            <div class="reveal" style="margin-bottom: 5rem;">
+                <img src="nocemento-ciampino_01.jpg" alt="Mappa Progetti e Cantieri Ciampino Quadrante Kennedy" class="feature-img">
+                <p class="text-center" style="font-size: 0.95rem; margin-top: -1rem; color: var(--gray);"><em>Principali nuove edificazioni e permessi nel quadrante Kennedy.</em></p>
+            </div>
+
+            <div class="comparison-container reveal">
+                <div class="project-details">
+                    <h3>Cosa stiamo perdendo</h3>
+                    <p>L'area tra Viale Kennedy e Via Spada è oggi classificata come terreno agricolo con vigneti. Il progetto attuale, pur promettendo "verde", presenta a nostro avviso uno squilibrio tra legittimi interessi privati e prevalente interesse per servizi alla cittadinanza:</p>
+                    
+                    <div class="progress-bar-container">
+                        <div class="progress-label">
+                            <span>Destinazione d'Uso Cubature</span>
+                            <span class="highlight-danger">93% Commerciale</span>
+                        </div>
+                        <div class="progress-track">
+                            <div class="progress-fill"></div>
+                        </div>
+                    </div>
+
+                    <ul>
+                        <li><strong>Scarso Verde Pubblico:</strong> Dei 4.000 mq ceduti, ben 2.636 mq sono destinati a 4 campi da padel privati con spogliatoi.</li>
+                        <li><strong>Rischio Idrogeologico:</strong> Le acque saranno gestite con vasche di laminazione interrate, temiamo insufficienti rispetto alle piogge torrenziali.</li>
+                        <li><strong>Vincolo Archeologico:</strong> Scavi e cemento lambiscono la fascia di rispetto storico di Viale Kennedy.</li>
+                        <li><strong>Calore:</strong> Solo 74 alberi previsti (1 ogni 200mq). Un forno a cielo aperto nella stagione estiva.</li>
+                    </ul>
+                </div>
+
+                <div class="visual-container">
+                    <img src="nocemento-ciampino_03.jpg" alt="Infografica confronto Cemento vs Polmone Verde" style="width: 100%; height: 100%; object-fit: contain;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="soluzioni" style="background: var(--grad-bg-soft); padding: 8rem 0;">
+        <div class="container">
+            <div class="text-center reveal" style="margin-bottom: 4rem;">
+                <span class="tag tag-green">La Nostra Visione</span>
+                <h2>C'è un'alternativa <span class="highlight">Sostenibile</span></h2>
+                <p style="max-width: 700px; margin: 0 auto;">Non diciamo solo NO. Abbiamo studiato il progetto e proponiamo modifiche concrete per trasformare una colata di cemento in un'opportunità verde per l'intera comunità.</p>
+            </div>
+
+            <div class="reveal" style="margin-bottom: 5rem;">
+                <img src="nocemento-ciampino_02.jpg" alt="Futuro del Quadrante Kennedy: Cemento o Respiro Verde?" class="feature-img">
+            </div>
+
+            <div class="vs-card reveal">
+                <div class="vs-col vs-bad">
+                    <h3 class="highlight-danger" style="margin-bottom: 2.5rem; font-size: 1.8rem;"><i class="fa-solid fa-xmark"></i> Progetto Attuale</h3>
+                    <div class="vs-item"><span class="vs-label">Gestione Acqua</span><span class="vs-value">Vasche Interrate</span><p style="font-size: 0.95rem; margin: 0.5rem 0 0; color: var(--gray);">In gran parte invisibili e di natura tecnica.</p></div>
+                    <div class="vs-item"><span class="vs-label">Verde Attrezzato</span><span class="vs-value">Campi da Padel</span><p style="font-size: 0.95rem; margin: 0.5rem 0 0; color: var(--gray);">Per lo più strutture private a pagamento.</p></div>
+                    <div class="vs-item"><span class="vs-label">Permeabilità Suolo</span><span class="vs-value highlight-danger">17%</span></div>
+                    <div class="vs-item"><span class="vs-label">Alberature</span><span class="vs-value">Isolate (74 totali)</span></div>
+                </div>
+
+                <div class="vs-col vs-good">
+                    <h3 class="highlight" style="margin-bottom: 2.5rem; font-size: 1.8rem;"><i class="fa-solid fa-check"></i> Proposta Comitato</h3>
+                    <div class="vs-item"><span class="vs-label">Gestione Acqua</span><span class="vs-value highlight">Rain Gardens</span><p style="font-size: 0.95rem; margin: 0.5rem 0 0; color: var(--gray);">Giardini filtranti che riducono il calore e arredano.</p></div>
+                    <div class="vs-item"><span class="vs-label">Verde Attrezzato</span><span class="vs-value highlight">Bosco Didattico / Orto</span><p style="font-size: 0.95rem; margin: 0.5rem 0 0; color: var(--gray);">Vero verde pubblico accessibile a tutti.</p></div>
+                    <div class="vs-item"><span class="vs-label">Permeabilità Suolo</span><span class="vs-value highlight">40% - 50%</span></div>
+                    <div class="vs-item"><span class="vs-label">Alberature</span><span class="vs-value highlight">Quinte Boscate</span><p style="font-size: 0.95rem; margin: 0.5rem 0 0; color: var(--gray);">Fasce dense ai confini per mitigazione acustica e visiva.</p></div>
+                </div>
+            </div>
+
+            <!-- NUOVO SLIDER RENDERING PROGETTO -->
+            <div class="project-gallery-wrapper reveal">
+                <div class="text-center" style="margin-bottom: 2rem;">
+                    <h3 style="font-size: 2rem;">Esplora la nostra Proposta</h3>
+                </div>
+                <div class="slider-container">
+                    <div class="slider-track" id="slider-track">
+                        <!-- Slide 1 -->
+                        <div class="slide">
+                            <img src="rendering/Vista da cavea con spogliatoi e alberi.png" alt="Vista dalla cavea con spogliatoi e alberature">
+                            <div class="slide-caption">Vista dalla cavea con spogliatoi e alberature</div>
+                        </div>
+                        <!-- Slide 2 -->
+                        <div class="slide">
+                            <img src="rendering/Vista da area sportiva con spogliatoi.png" alt="Panoramica dell'area sportiva e spogliatoi">
+                            <div class="slide-caption">Panoramica dell'area sportiva e spogliatoi</div>
+                        </div>
+                        <!-- Slide 3 -->
+                        <div class="slide">
+                            <img src="rendering/Osservatore Franchi vs Spada.jpeg" alt="Vista da Via O. Franchi verso Via G. Spada">
+                            <div class="slide-caption">Vista da Via O. Franchi verso Via G. Spada</div>
+                        </div>
+                        <!-- Slide 4 -->
+                        <div class="slide">
+                            <img src="rendering/Mappa concettuale poli concept.jpeg" alt="Mappa Concettuale: Suddivisione in Poli">
+                            <div class="slide-caption">Mappa Concettuale: Suddivisione in Poli</div>
+                        </div>
+                        <!-- Slide 5 -->
+                        <div class="slide">
+                            <img src="rendering/Mappa concettuale flussi.jpeg" alt="Mappa Concettuale: Flussi e Mobilità">
+                            <div class="slide-caption">Mappa Concettuale: Flussi e Mobilità</div>
+                        </div>
+                        <!-- Slide 6 -->
+                        <div class="slide">
+                            <img src="rendering/Mappa concettuale definizione volumi.jpeg" alt="Mappa Concettuale: Definizione dei Volumi">
+                            <div class="slide-caption">Mappa Concettuale: Definizione dei Volumi</div>
+                        </div>
+                        <!-- Slide 7 -->
+                        <div class="slide">
+                            <img src="rendering/Mappa concettuale 3D.jpeg" alt="Vista 3D del Progetto Alternativo">
+                            <div class="slide-caption">Vista 3D del Progetto Alternativo</div>
+                        </div>
+                        <!-- Slide 8 -->
+                        <div class="slide">
+                            <img src="rendering/Mappa concettuale 2D.jpeg" alt="Planimetria 2D del Progetto">
+                            <div class="slide-caption">Planimetria 2D del Progetto</div>
+                        </div>
+                        <!-- Slide 9 -->
+                        <div class="slide">
+                            <img src="rendering/Cavea - sera.jpeg" alt="Atmosfera serale nella nuova Cavea">
+                            <div class="slide-caption">Atmosfera serale nella nuova Cavea</div>
+                        </div>
+                    </div>
+                    
+                    <button class="slider-nav-btn prev" id="slider-prev" aria-label="Immagine precedente"><i class="fa-solid fa-chevron-left"></i></button>
+                    <button class="slider-nav-btn next" id="slider-next" aria-label="Prossima immagine"><i class="fa-solid fa-chevron-right"></i></button>
+                </div>
+                <div class="slider-dots" id="slider-dots"></div>
+            </div>
+            <!-- FINE NUOVO SLIDER -->
+            
+            <div class="rain-garden-card reveal">
+                <img src="nocemento-ciampino_04.png" alt="Rain Garden Esempio" class="rain-garden-img">
+                <div style="flex: 1;">
+                    <h3 style="font-size: 1.8rem;">Cos'è un Rain Garden?</h3>
+                    <p style="margin-bottom: 0; font-size: 1.05rem;">Un rain garden è un giardino "della pioggia": una leggera depressione nel terreno piena di piante e substrato drenante (sabbia, ghiaia). Raccoglie l'acqua piovana da tetti e strade, la filtra naturalmente e la fa assorbire lentamente dal suolo, evitando allagamenti e purificandola. Una soluzione ideale ed elegante contro piogge intense e isole di calore estive.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="press" style="padding: 8rem 0; background: white;">
+        <div class="container">
+            <div class="text-center reveal" style="margin-bottom: 4rem;">
+                <span class="tag tag-green">Rassegna Stampa</span>
+                <h2>Hanno parlato <span class="highlight">di noi</span></h2>
+                <p>La mobilitazione cresce. Ecco cosa dicono i media locali e nazionali sul nostro impegno.</p>
+            </div>
+
+            <div class="press-grid reveal">
+
+                <a href="https://www.castellinotizie.it/2026/04/13/ciampino-ha-detto-no-al-cemento-carciofata-alla-folgarella-per-il-ricorso-al-tar/" target="_blank" class="press-item">
+                    <div>
+                        <div class="press-source">
+                            Castelli Notizie
+                            <span class="badge-new">New</span>
+                        </div>
+                        <div class="press-title">Ciampino ha detto "NO" al cemento: carciofata alla Folgarella per il ricorso al TAR</div>
+                    </div>
+                    <div class="press-icon"><i class="fa-solid fa-arrow-up-right-from-square"></i></div>
+                </a>
+
+                <a href="https://www.lanuovaecologia.it/ciampino-area-commerciale-cemento/" target="_blank" class="press-item">
+                    <div>
+                        <div class="press-source">
+                            La Nuova Ecologia
+                        </div>
+                        <div class="press-title">Ciampino: area commerciale e cemento</div>
+                    </div>
+                    <div class="press-icon"><i class="fa-solid fa-arrow-up-right-from-square"></i></div>
+                </a>
+
+                <a href="castellinotizie-ricorso-al-tar-contro-il-cemento.jpg" target="_blank" class="press-item">
+                    <div>
+                        <div class="press-source">
+                            Castelli Notizie (Cartaceo)
+                        </div>
+                        <div class="press-title">Ricorso al TAR contro il cemento</div>
+                    </div>
+                    <div class="press-icon"><i class="fa-solid fa-arrow-up-right-from-square"></i></div>
+                </a>
+
+                <a href="https://www.castellinotizie.it/2026/03/23/ciampino-per-la-folgarella-i-comitati-sfidano-il-progetto-della-giunta-orti-urbani-bio-lago-e-spazi-sociali/" target="_blank" class="press-item">
+                    <div>
+                        <div class="press-source">
+                            Castelli Notizie
+                        </div>
+                        <div class="press-title">Ciampino, per la Folgarella i comitati sfidano il progetto della Giunta: orti urbani, bio-lago e spazi sociali</div>
+                    </div>
+                    <div class="press-icon"><i class="fa-solid fa-arrow-up-right-from-square"></i></div>
+                </a>
+
+                <a href="https://ilcaffe.tv/articolo/255242/ciampino-progetto-polo-commerciale-il-comune-dice-no-alle-modifiche-i-cittadini-organizzano-la-protesta" target="_blank" class="press-item">
+                    <div>
+                        <div class="press-source">
+                            Il Caffè.tv
+                        </div>
+                        <div class="press-title">Ciampino, progetto polo commerciale: il Comune dice ‘No’ alle modifiche. I cittadini organizzano la protesta</div>
+                    </div>
+                    <div class="press-icon"><i class="fa-solid fa-arrow-up-right-from-square"></i></div>
+                </a>
+
+                <a href="https://www.castellinotizie.it/2026/03/09/ciampino-ricorso-al-tar-contro-la-cementificazione-alla-folgarella-associazioni-e-cittadini-mobilitati/" target="_blank" class="press-item">
+                    <div>
+                        <div class="press-source">
+                            Castelli Notizie
+                        </div>
+                        <div class="press-title">Ciampino, ricorso al Tar contro la cementificazione alla Folgarella: associazioni e cittadini mobilitati</div>
+                    </div>
+                    <div class="press-icon"><i class="fa-solid fa-arrow-up-right-from-square"></i></div>
+                </a>
+
+                <a href="https://www.ilmamilio.it/wp/2026/03/09/ciampino-ricorso-al-tar-contro-la-delibera-sulla-vigna-della-folgarella-associazioni-e-cittadini-pronti-alla-mobilitazione/" target="_blank" class="press-item">
+                    <div>
+                        <div class="press-source">
+                            Il Mamilio
+                        </div>
+                        <div class="press-title">Ciampino | Ricorso al Tar contro la delibera sulla vigna della Folgarella: associazioni e cittadini pronti alla mobilitazione</div>
+                    </div>
+                    <div class="press-icon"><i class="fa-solid fa-arrow-up-right-from-square"></i></div>
+                </a>
+
+                <a href="https://ilcaffe.tv/articolo/254403/ciampino-comitato-di-cittadini-cambiamo-il-progetto-del-polo-commerciale-di-viale-kennedy-ce-ancora-tempo" target="_blank" class="press-item">
+                    <div>
+                        <div class="press-source">Il Caffè.tv</div>
+                        <div class="press-title">Ciampino, Comitato di cittadini: “Cambiamo il progetto del polo commerciale di viale Kennedy, c’è ancora tempo”</div>
+                    </div>
+                    <div class="press-icon"><i class="fa-solid fa-arrow-up-right-from-square"></i></div>
+                </a>
+
+                <a href="https://www.romatoday.it/politica/ciampino-progetto-zona-commerciale-viale-kennedy.html" target="_blank" class="press-item">
+                    <div>
+                        <div class="press-source">RomaToday</div>
+                        <div class="press-title">Ciampino, progetto zona commerciale Viale Kennedy</div>
+                    </div>
+                    <div class="press-icon"><i class="fa-solid fa-arrow-up-right-from-square"></i></div>
+                </a>
+
+                <a href="https://www.castellinotizie.it/2026/02/04/ciampino-il-progetto-che-cancella-una-vigna-lallarme-del-comitato-no-cemento-sul-quadrante-kennedy/" target="_blank" class="press-item">
+                    <div>
+                        <div class="press-source">Castelli Notizie</div>
+                        <div class="press-title">Il progetto che cancella una vigna: l'allarme del Comitato</div>
+                    </div>
+                    <div class="press-icon"><i class="fa-solid fa-arrow-up-right-from-square"></i></div>
+                </a>
+
+                <a href="https://www.controluce.it/aumentano-le-adesioni-al-comitato-no-al-cemento-ciampino/" target="_blank" class="press-item">
+                    <div>
+                        <div class="press-source">Controluce</div>
+                        <div class="press-title">Aumentano le adesioni al comitato No al Cemento Ciampino</div>
+                    </div>
+                    <div class="press-icon"><i class="fa-solid fa-arrow-up-right-from-square"></i></div>
+                </a>
+
+                <a href="https://www.ilmamilio.it/wp/2026/01/29/ciampino-cresce-il-fronte-del-no-al-cemento-aumentano-le-adesioni-al-comitato/" target="_blank" class="press-item">
+                    <div>
+                        <div class="press-source">Il Mamilio</div>
+                        <div class="press-title">Cresce il fronte del No al Cemento: aumentano le adesioni</div>
+                    </div>
+                    <div class="press-icon"><i class="fa-solid fa-arrow-up-right-from-square"></i></div>
+                </a>
+                
+                <a href="https://www.dailymotion.com/video/x9zmpuo" target="_blank" class="press-item">
+                    <div>
+                        <div class="press-source">Video Servizio</div>
+                        <div class="press-title">Guarda il servizio video sulla mobilitazione</div>
+                    </div>
+                    <div class="press-icon"><i class="fa-solid fa-play"></i></div>
+                </a>
+
+                <a href="https://www.giornaleinfocastelliromani.it/castelli-romani-le-associazioni-ambientaliste-presentano-una-mozione-ai-comuni-per-fermare-la-cementificazione/" target="_blank" class="press-item">
+                    <div>
+                        <div class="press-source">Info Castelli Romani</div>
+                        <div class="press-title">Le associazioni presentano una mozione per fermare la cementificazione</div>
+                    </div>
+                    <div class="press-icon"><i class="fa-solid fa-arrow-up-right-from-square"></i></div>
+                </a>
+
+                <a href="https://www.metamagazine.it/ciampino-diritti-in-comune-altro-cemento-alla-folgarella/" target="_blank" class="press-item">
+                    <div>
+                        <div class="press-source">Meta Magazine</div>
+                        <div class="press-title">Diritti in Comune: Altro cemento alla Folgarella</div>
+                    </div>
+                    <div class="press-icon"><i class="fa-solid fa-arrow-up-right-from-square"></i></div>
+                </a>
+
+                <a href="https://romalife.it/2026/02/11/verde-addio-roma-nuovo-progetto-edilizio/" target="_blank" class="press-item">
+                    <div>
+                        <div class="press-source">Roma Life</div>
+                        <div class="press-title">Verde addio? Nuovo progetto edilizio a Ciampino</div>
+                    </div>
+                    <div class="press-icon"><i class="fa-solid fa-arrow-up-right-from-square"></i></div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" style="padding: 6rem 0; background: var(--light);">
+        <div class="container" style="max-width: 800px;">
+            <div class="text-center reveal" style="margin-bottom: 3rem;">
+                <h2>Domande Frequenti</h2>
+            </div>
+            <div class="reveal">
+                <details style="background: white; padding: 1.8rem; border-radius: 20px; margin-bottom: 1.5rem; box-shadow: var(--shadow-sm); cursor: pointer; border: 1px solid rgba(0,0,0,0.03); transition: 0.3s;">
+                    <summary style="font-weight: 800; font-size: 1.2rem; color: var(--primary-deep); outline: none;">È già tutto deciso?</summary>
+                    <p style="margin-top: 1.5rem; margin-bottom: 0; color: var(--gray); font-size: 1.05rem; line-height: 1.7;"><strong>No.</strong> La Giunta ha approvato lo schema, ma manca ancora la firma della convenzione notarile definitiva. C'è spazio politico per chiedere varianti migliorative che contemperino maggiormente le esigenze dei residenti.</p>
+                </details>
+                <details style="background: white; padding: 1.8rem; border-radius: 20px; margin-bottom: 1.5rem; box-shadow: var(--shadow-sm); cursor: pointer; border: 1px solid rgba(0,0,0,0.03); transition: 0.3s;">
+                    <summary style="font-weight: 800; font-size: 1.2rem; color: var(--primary-deep); outline: none;">Cosa succede a Viale Kennedy?</summary>
+                    <p style="margin-top: 1.5rem; margin-bottom: 0; color: var(--gray); font-size: 1.05rem; line-height: 1.7;">Il quadrante Kennedy rappresenta una vera e propria cerniera tra il Comune di Ciampino e Roma. È anche il principale asse viario di collegamento con i Comuni dei Castelli Romani: un’area da sempre molto trafficata, che raccoglie gli snodi fondamentali verso il G.R.A., l’Anagnina e la via Appia. Nella zona più vicina al G.R.A. trovano posto grandi insediamenti industriali, che nel tempo si sono estesi fino a coinvolgere l’area cosiddetta “artigianale” di via Lucrezia Romana. Un’area che, a nostro avviso, conserva un solo insediamento davvero artigianale e storicamente legato alla comunità ciampinese. Oggi, invece di investire in uno sviluppo organico, equilibrato e davvero utile alla città, le ultime grandi aree verdi del quadrante stanno venendo interessate da progettualità frammentate, spesso scollegate tra loro e prevalentemente di natura commerciale. Tutto ciò appare un controsenso di fronte alle grandi emergenze del nostro tempo: l’emergenza abitativa, con costi dell’abitare sempre più proibitivi per giovani e famiglie; l’emergenza climatica, con estati sempre più roventi e un clima che tende a tropicalizzarsi. Oggi più che mai è doveroso, possibile e necessario adottare una strategia diversa che mitighi gli impatti climatici e salvaguardi i pochi spazi verdi rimasti.</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <section class="docs-section reveal">
+        <div class="container">
+            <div class="doc-box">
+                <div style="flex: 1;">
+                    <h3 style="margin-bottom: 0.8rem; color: var(--primary-deep); font-size: 2rem;">Trasparenza e Relazioni Tecniche</h3>
+                    <p style="margin-bottom: 0; font-size: 1.1rem; color: var(--gray);">Per massima trasparenza, mettiamo a disposizione i documenti ufficiali del progetto e le approfondite relazioni tecniche elaborate in modo indipendente.</p>
+                </div>
+                <div class="doc-actions">
+                    <a href="https://www.halleyweb.com/c058118/zf/index.php/atti-amministrativi/delibere/dettaglio/atto/GTVRBNUU5STM-H" target="_blank" class="btn btn-primary" style="background: var(--primary-deep); box-shadow: var(--shadow-sm);">
+                        <i class="fa-solid fa-file-contract"></i> &nbsp; Delibera
+                    </a>
+                    <a href="NuovaFolgarellaVerde_Relazione_Tecnica.pdf" target="_blank" download class="btn btn-accent">
+                        <i class="fa-solid fa-file-pdf"></i> &nbsp; Relazione Progetto
+                    </a>
+                    <a href="relazione-sul-traffico-a-ciampino.pdf" target="_blank" download class="btn btn-primary">
+                        <i class="fa-solid fa-file-pdf"></i> &nbsp; Relazione Traffico
+                    </a>
+                    <a href="relazione-sul-verde-a-ciampino.pdf" target="_blank" download class="btn btn-primary">
+                        <i class="fa-solid fa-file-pdf"></i> &nbsp; Relazione Verde
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contatti" class="cta-section">
+        <div class="cta-bg"></div>
+        <div class="container reveal" style="position: relative; z-index: 2;">
+            <h2>Non restare a guardare</h2>
+            <p style="color: rgba(255,255,255,0.9); margin-bottom: 2.5rem; font-size: 1.25rem;">Contattaci per aderire all'iniziativa e conoscere le ultime novità.</p>
+            <a href="mailto:nocementociampino@outlook.it?subject=Voglio%20rimanere%20aggiornato%20sulle%20attivit%C3%A0%20del%20Comitato" class="btn btn-primary" style="font-size: 1.2rem; padding: 1.2rem 3rem;">Resta aggiornato <i class="fa-regular fa-paper-plane"></i></a>
+            
+            <div style="margin-top: 4rem; display: flex; justify-content: center; gap: 2.5rem; font-size: 2.5rem;">
+                <a href="https://www.facebook.com/people/No-Cemento-Ciampino/61588225018829/" target="_blank" style="color: white; transition: 0.3s; text-shadow: 0 4px 10px rgba(0,0,0,0.2);" onmouseover="this.style.color='#f8fafc'; this.style.transform='scale(1.1)';" onmouseout="this.style.color='white'; this.style.transform='scale(1)';">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+                <a href="https://www.instagram.com/nocementociampino" target="_blank" style="color: white; transition: 0.3s; text-shadow: 0 4px 10px rgba(0,0,0,0.2);" onmouseover="this.style.color='#f8fafc'; this.style.transform='scale(1.1)';" onmouseout="this.style.color='white'; this.style.transform='scale(1)';">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://www.youtube.com/@Nocementociampino" target="_blank" style="color: white; transition: 0.3s; text-shadow: 0 4px 10px rgba(0,0,0,0.2);" onmouseover="this.style.color='#f8fafc'; this.style.transform='scale(1.1)';" onmouseout="this.style.color='white'; this.style.transform='scale(1)';">
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 3rem; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 3rem; margin-bottom: 2rem;">
+                <div style="flex: 1; min-width: 280px;">
+                    <h4 style="margin-bottom: 1.2rem;">Comitato No Cemento</h4>
+                    <p style="color: #94a3b8; line-height: 1.8;">Cittadini attivi per la tutela del paesaggio agrario e della sicurezza idrogeologica di Ciampino e Ciampino Folgarella e Viale Kennedy.</p>
+                    <p style="color: #64748b; font-size: 0.85rem; line-height: 1.6; margin-top: 2rem;"><strong>Disclaimer:</strong> Questo sito è un'iniziativa indipendente di sensibilizzazione civica e non rappresenta una testata giornalistica. Le informazioni e le elaborazioni grafiche pubblicate hanno scopo puramente informativo e qualitativo. Non si garantisce l'assenza di imprecisioni involontarie. I marchi, i loghi e i riferimenti a progetti di terzi appartengono ai legittimi proprietari e sono citati per diritto di cronaca e critica. Il Comitato e gli autori del sito non rispondono di eventuali danni derivanti dall'uso delle informazioni qui presenti né dei contenuti dei siti esterni collegati.</p>
+                </div>
+            </div>
+            <div class="text-center" style="color: #64748b; font-size: 0.9rem;">
+                &copy; 2026 Comitato No Cemento Ciampino. Sito indipendente realizzato da cittadini.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Scroll Reveal Animation
+        const revealElements = document.querySelectorAll('.reveal');
+        
+        const revealOnScroll = () => {
+            const windowHeight = window.innerHeight;
+            const elementVisible = 100;
+
+            revealElements.forEach((reveal) => {
+                const elementTop = reveal.getBoundingClientRect().top;
+                if (elementTop < windowHeight - elementVisible) {
+                    reveal.classList.add('active');
+                }
+            });
+        };
+
+        window.addEventListener('scroll', revealOnScroll);
+        revealOnScroll();
+
+        // Header Scroll Effect
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('navbar');
+            header.classList.toggle('scrolled', window.scrollY > 50);
+        });
+
+        // Mobile Menu Toggle
+        const menuBtn = document.querySelector('.mobile-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        
+        if(window.innerWidth < 768) {
+            menuBtn.style.display = 'block';
+        }
+
+        menuBtn.addEventListener('click', () => {
+            if (navLinks.style.display === 'flex') {
+                navLinks.style.display = 'none';
+            } else {
+                navLinks.style.display = 'flex';
+                navLinks.style.flexDirection = 'column';
+                navLinks.style.position = 'absolute';
+                navLinks.style.top = '100%';
+                navLinks.style.left = '0';
+                navLinks.style.width = '100%';
+                navLinks.style.background = 'rgba(255, 255, 255, 0.95)';
+                navLinks.style.backdropFilter = 'blur(10px)';
+                navLinks.style.padding = '2.5rem';
+                navLinks.style.boxShadow = '0 20px 40px rgba(0,0,0,0.1)';
+                navLinks.style.borderBottomLeftRadius = '24px';
+                navLinks.style.borderBottomRightRadius = '24px';
+                
+                document.querySelectorAll('.nav-link').forEach(link => {
+                    link.style.color = 'var(--dark)';
+                    link.style.marginBottom = '1.5rem';
+                    link.style.fontSize = '1.1rem';
+                });
+            }
+        });
+    </script>
+    
+    <div id="cookie-banner">
+        <div class="cookie-content">
+            <div style="flex: 1;">
+                <h4 style="margin-bottom: 0.5rem; font-size: 1.15rem; color: var(--primary-deep);">Rispettiamo la tua privacy</h4>
+                <p style="margin: 0; font-size: 0.95rem; color: var(--gray);">Utilizziamo cookie tecnici e di analisi (Google Tag Manager) per migliorare l'esperienza e sostenere la nostra causa. Puoi accettare o rifiutare il tracciamento.</p>
+            </div>
+            <div class="cookie-actions">
+                <button id="btn-reject" class="cookie-btn cookie-reject">Rifiuta</button>
+                <button id="btn-accept" class="cookie-btn cookie-accept">Accetta tutto</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="share-container" id="share-container">
+        <ul class="share-menu">
+            <li><a href="#" class="share-item copy" id="copy-link" data-tooltip="Copia Link"><i class="fa-solid fa-link"></i></a></li>
+            <li><a href="mailto:?subject=Salviamo%20Ciampino&body=Guarda%20questo%20progetto:%20https://nocementociampino.it/" class="share-item mail" data-tooltip="Email"><i class="fa-solid fa-envelope"></i></a></li>
+            <li><a href="https://wa.me/?text=Salviamo%20Ciampino!%20Sostieni%20anche%20tu:%20https://nocementociampino.it/" target="_blank" class="share-item wa" data-tooltip="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a></li>
+            <li><a href="https://t.me/share/url?url=https://nocementociampino.it/&text=Salviamo%20Ciampino" target="_blank" class="share-item tg" data-tooltip="Telegram"><i class="fa-brands fa-telegram"></i></a></li>
+            <li><a href="https://www.linkedin.com/sharing/share-offsite/?url=https://nocementociampino.it/" target="_blank" class="share-item in" data-tooltip="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a></li>
+            <li><a href="https://twitter.com/intent/tweet?text=Fermiamo%20il%20cemento%20a%20Ciampino!&url=https://nocementociampino.it/" target="_blank" class="share-item x" data-tooltip="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a></li>
+            <li><a href="https://www.facebook.com/sharer/sharer.php?u=https://nocementociampino.it/" target="_blank" class="share-item fb" data-tooltip="Facebook"><i class="fa-brands fa-facebook-f"></i></a></li>
+        </ul>
+        <div class="share-fab" id="share-fab">
+            <i class="fa-solid fa-share-nodes"></i>
+        </div>
+    </div>
+    
+    <div id="milestone-modal" class="modal-overlay">
+        <div class="modal-box">
+            <button class="modal-close" id="modal-close-milestone">&times;</button>
+            
+            <div class="modal-body">
+                <h3 class="text-center" style="margin-bottom: 1.5rem; color: var(--primary-deep); font-size: 1.8rem;">Un altro GRANDE traguardo!</h3>
+                
+                <img src="nocemento-ciampino_06.jpg" 
+                     alt="Traguardo 7000 euro raggiunto per il ricorso al TAR" 
+                     title="Grazie Ciampino!"
+                     class="modal-img">
+                
+                <div class="modal-actions">
+                    <button id="copy-img-link" class="btn btn-outline" style="border-color: var(--primary); color: var(--primary); background: transparent;">
+                        <i class="fa-regular fa-copy"></i> Copia Link
+                    </button>
+                    <a href="https://wa.me/?text=Insieme%20siamo%20più%20forti!%20Raggiunti%20i%207.000€%20per%20il%20ricorso%20al%20TAR.%20La%20raccolta%20continua:%20https://nocementociampino.it" target="_blank" class="btn btn-primary">
+                        <i class="fa-brands fa-whatsapp"></i> Condividi
+                    </a>
+                </div>
+                <p class="text-center" style="font-size: 0.95rem; color: var(--gray); margin-top: 1.5rem; font-weight: 500;">
+                    Una città che si muove insieme difende davvero il suo territorio!
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- === MODALE LIGHTBOX PER SLIDER === -->
+    <div id="lightbox-modal" class="lightbox-overlay">
+        <button class="lightbox-close" id="lightbox-close-btn">&times;</button>
+        <img src="" alt="Zoom Immagine" class="lightbox-img" id="lightbox-image">
+    </div>
+
+    <script>
+        // --- 1. CONFIGURAZIONE GTM ---
+        function loadGTM() {
+            console.log("GTM Caricato");
+            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-WM4QC78Z');
+        }
+
+        // --- 2. LOGICA COOKIE BANNER ---
+        const banner = document.getElementById('cookie-banner');
+        const btnAccept = document.getElementById('btn-accept');
+        const btnReject = document.getElementById('btn-reject');
+        
+        const consent = localStorage.getItem('cookieConsent');
+        if (!consent) {
+            banner.style.display = 'block';
+        } else if (consent === 'accepted') {
+            loadGTM();
+        }
+
+        btnAccept.addEventListener('click', () => {
+            localStorage.setItem('cookieConsent', 'accepted');
+            banner.style.display = 'none';
+            loadGTM(); 
+        });
+
+        btnReject.addEventListener('click', () => {
+            localStorage.setItem('cookieConsent', 'rejected');
+            banner.style.display = 'none';
+        });
+
+        // --- 3. LOGICA SHARE BUTTONS ---
+        const shareFab = document.getElementById('share-fab');
+        const shareContainer = document.getElementById('share-container');
+        const copyLinkBtn = document.getElementById('copy-link');
+
+        shareFab.addEventListener('click', () => {
+            shareContainer.classList.toggle('active');
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!shareContainer.contains(e.target)) {
+                shareContainer.classList.remove('active');
+            }
+        });
+
+        copyLinkBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            const url = window.location.href;
+            navigator.clipboard.writeText(url).then(() => {
+                const originalIcon = copyLinkBtn.innerHTML;
+                copyLinkBtn.innerHTML = '<i class="fa-solid fa-check"></i>';
+                copyLinkBtn.style.background = 'var(--primary)';
+                copyLinkBtn.style.color = 'white';
+                setTimeout(() => {
+                    copyLinkBtn.innerHTML = originalIcon;
+                    copyLinkBtn.style.background = 'white';
+                    copyLinkBtn.style.color = 'var(--dark)';
+                }, 2000);
+            });
+        });
+
+        // === LOGICA MODALE TRAGUARDO ===
+        const modal = document.getElementById('milestone-modal');
+        const btnOpenMilestone = document.getElementById('btn-open-milestone');
+        const btnCloseMilestone = document.getElementById('modal-close-milestone');
+        const btnCopyImg = document.getElementById('copy-img-link');
+
+        btnOpenMilestone.addEventListener('click', (e) => {
+            e.preventDefault(); 
+            modal.classList.add('open');
+            document.body.style.overflow = 'hidden'; 
+        });
+
+        const closeModal = () => {
+            modal.classList.remove('open');
+            document.body.style.overflow = ''; 
+        };
+
+        btnCloseMilestone.addEventListener('click', closeModal);
+
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) closeModal();
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && modal.classList.contains('open')) {
+                closeModal();
+            }
+        });
+
+        btnCopyImg.addEventListener('click', () => {
+            const imgUrl = window.location.origin + '/nocemento-ciampino_06.jpg';
+            navigator.clipboard.writeText(imgUrl).then(() => {
+                const originalHTML = btnCopyImg.innerHTML;
+                btnCopyImg.innerHTML = '<i class="fa-solid fa-check"></i> Copiato!';
+                btnCopyImg.style.background = 'var(--primary)';
+                btnCopyImg.style.color = 'white';
+                
+                setTimeout(() => {
+                    btnCopyImg.innerHTML = originalHTML;
+                    btnCopyImg.style.background = 'transparent';
+                    btnCopyImg.style.color = 'var(--primary)';
+                }, 2000);
+            }).catch(err => {
+                console.error('Errore copia', err);
+                alert('Impossibile copiare il link automaticamente.');
+            });
+        });
+
+        // === LOGICA NUOVO SLIDER PROGETTO E LIGHTBOX ===
+        document.addEventListener('DOMContentLoaded', () => {
+            const track = document.getElementById('slider-track');
+            const slides = document.querySelectorAll('.slide');
+            const prevBtn = document.getElementById('slider-prev');
+            const nextBtn = document.getElementById('slider-next');
+            const dotsContainer = document.getElementById('slider-dots');
+            
+            if(!track || slides.length === 0) return;
+
+            let currentIndex = 0;
+
+            slides.forEach((_, i) => {
+                const dot = document.createElement('div');
+                dot.classList.add('dot');
+                if (i === 0) dot.classList.add('active');
+                dot.addEventListener('click', () => {
+                    currentIndex = i;
+                    updateSlider();
+                });
+                dotsContainer.appendChild(dot);
+            });
+            
+            const dots = document.querySelectorAll('.dot');
+
+            function updateSlider() {
+                track.style.transform = `translateX(-${currentIndex * 100}%)`;
+                dots.forEach(dot => dot.classList.remove('active'));
+                dots[currentIndex].classList.add('active');
+            }
+
+            function nextSlide() {
+                currentIndex = (currentIndex === slides.length - 1) ? 0 : currentIndex + 1;
+                updateSlider();
+            }
+
+            function prevSlide() {
+                currentIndex = (currentIndex === 0) ? slides.length - 1 : currentIndex - 1;
+                updateSlider();
+            }
+
+            nextBtn.addEventListener('click', nextSlide);
+            prevBtn.addEventListener('click', prevSlide);
+
+            let touchStartX = 0;
+            let touchEndX = 0;
+            
+            track.addEventListener('touchstart', e => {
+                touchStartX = e.changedTouches[0].screenX;
+            }, {passive: true});
+            
+            track.addEventListener('touchend', e => {
+                touchEndX = e.changedTouches[0].screenX;
+                handleSwipe();
+            }, {passive: true});
+
+            function handleSwipe() {
+                const threshold = 50;
+                if (touchStartX - touchEndX > threshold) nextSlide();
+                if (touchEndX - touchStartX > threshold) prevSlide();
+            }
+
+            const lightbox = document.getElementById('lightbox-modal');
+            const lightboxImg = document.getElementById('lightbox-image');
+            const lightboxCloseBtn = document.getElementById('lightbox-close-btn');
+
+            slides.forEach(slide => {
+                const img = slide.querySelector('img');
+                img.addEventListener('click', () => {
+                    lightboxImg.src = img.src;
+                    lightboxImg.alt = img.alt;
+                    lightbox.classList.add('open');
+                    document.body.style.overflow = 'hidden';
+                });
+            });
+
+            const closeLightbox = () => {
+                lightbox.classList.remove('open');
+                document.body.style.overflow = '';
+            };
+
+            lightboxCloseBtn.addEventListener('click', closeLightbox);
+            
+            lightbox.addEventListener('click', (e) => {
+                if (e.target === lightbox) closeLightbox();
+            });
+
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && lightbox.classList.contains('open')) {
+                    closeLightbox();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
