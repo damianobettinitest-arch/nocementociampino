@@ -578,6 +578,13 @@
                         <span class="event-title">Traguardo 7.000€ per il TAR</span>
                     </div>
                 </button>
+                <a href="ricorso.html" class="btn btn-accent hero-btn">
+                    <i class="fa-solid fa-scale-balanced" style="font-size: 1.5rem;"></i>
+                    <div class="btn-text-col">
+                        <span class="event-date" style="color: rgba(255,255,255,0.9);">Ricorso TAR</span>
+                        <span class="event-title">La Raccolta Continua</span>
+                    </div>
+                </a>
                 <a href="#soluzioni" class="btn btn-primary hero-btn" style="background: white; color: var(--primary-deep);">Scopri la proposta</a>
                 <a href="#progetto" class="btn btn-outline hero-btn">Leggi i Dati</a>
             </div>
@@ -1090,7 +1097,7 @@
             <div class="modal-body">
                 <h3 class="text-center" style="margin-bottom: 1.5rem; color: var(--primary-deep); font-size: 1.8rem;">Un altro GRANDE traguardo!</h3>
                 
-                <img src="nocemento-ciampino_06.jpeg" 
+                <img src="nocemento-ciampino_06.jpg" 
                      alt="Traguardo 7000 euro raggiunto per il ricorso al TAR" 
                      title="Grazie Ciampino!"
                      class="modal-img">
@@ -1211,7 +1218,7 @@
         });
 
         btnCopyImg.addEventListener('click', () => {
-            const imgUrl = window.location.origin + '/nocemento-ciampino_06.jpeg';
+            const imgUrl = window.location.origin + '/nocemento-ciampino_06.jpg';
             navigator.clipboard.writeText(imgUrl).then(() => {
                 const originalHTML = btnCopyImg.innerHTML;
                 btnCopyImg.innerHTML = '<i class="fa-solid fa-check"></i> Copiato!';
